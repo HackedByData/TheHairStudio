@@ -180,7 +180,7 @@ Nothing in the sources defined a component inventory, so the whole set is author
 - **`ServiceRow`** — the dotted-leader price line from the printed menu. The salon's single strongest visual signature.
 - **`StylistCard`** — the Instagram "highlights" pattern the owner explicitly asked to mirror.
 - **`PhotoFrame`** — wraps every image so that missing photography renders as a visible, labelled gap instead of a plausible-looking substitute.
-- **`HaircutScene`** — the home hero. A real-time **3D** scene: the back of a woman's head, 620 strands of hair cut straight across by a travelling pair of scissors as the page scrolls, the cut lengths falling away. three.js, modelled from primitives; six named materials. The host page must load three.js through the pinned import map — see `ui_kits/website/index.html`.
+- **`HaircutScene`** — the home hero. A real-time **3D** scene: the back of a woman's freshly gloss-treated hair, ~2,800 clump-groomed ribbon strands under a film-style dual-highlight hair shader. As the page scrolls the camera pushes in, the lengths gather into a lock at the nape, and a single snip drops the cut fall — every frame a pure function of scroll progress. three.js; the six named standard materials plus the custom hair shader. The host page must load three.js through the pinned import map — see `ui_kits/website/index.html`.
 
 ---
 

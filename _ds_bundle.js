@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"TheHairStudioDesignSystem_03d078","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"Logo","sourcePath":"components/core/Logo.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Card","sourcePath":"components/display/Card.jsx"},{"name":"HaircutScene","sourcePath":"components/display/HaircutScene.jsx"},{"name":"PhotoFrame","sourcePath":"components/display/PhotoFrame.jsx"},{"name":"Rating","sourcePath":"components/display/Rating.jsx"},{"name":"ServiceRow","sourcePath":"components/display/ServiceRow.jsx"},{"name":"StylistCard","sourcePath":"components/display/StylistCard.jsx"},{"name":"Testimonial","sourcePath":"components/display/Testimonial.jsx"},{"name":"WorkTile","sourcePath":"components/display/WorkTile.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"RadioGroup","sourcePath":"components/forms/RadioGroup.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Textarea","sourcePath":"components/forms/Textarea.jsx"},{"name":"Footer","sourcePath":"components/navigation/Footer.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"73c3efba7c5d","components/core/Button.jsx":"86bccee65fd1","components/core/Divider.jsx":"dab554ef70f6","components/core/Icon.jsx":"682e34733bb3","components/core/IconButton.jsx":"b7af9f973776","components/core/Logo.jsx":"6151e4315740","components/core/SectionHeading.jsx":"3b47aea23d21","components/core/Tag.jsx":"ae4c7e798c2d","components/display/Card.jsx":"7a49f48b2b0a","components/display/HaircutScene.jsx":"1ca0c0c9a149","components/display/PhotoFrame.jsx":"dcd812e57362","components/display/Rating.jsx":"286c13a7ba03","components/display/ServiceRow.jsx":"9d33ac2bd29f","components/display/StylistCard.jsx":"e02e2d89d551","components/display/Testimonial.jsx":"d190dcc1a45d","components/display/WorkTile.jsx":"0cf9538ece54","components/feedback/Dialog.jsx":"246513e612f8","components/feedback/EmptyState.jsx":"228cd9922ac5","components/feedback/Toast.jsx":"c568909b5c6a","components/forms/Checkbox.jsx":"20296a039259","components/forms/Input.jsx":"d629d2659a33","components/forms/RadioGroup.jsx":"02709459d518","components/forms/Select.jsx":"5617241b162f","components/forms/Switch.jsx":"b09aeddc45e0","components/forms/Textarea.jsx":"3690d5bd1b4e","components/navigation/Footer.jsx":"6cdae1068ee9","components/navigation/NavBar.jsx":"12eef6a0dd75","components/navigation/Tabs.jsx":"7b0f40dcde74","ui_kits/booking/Booking.jsx":"2c06b5b11189","ui_kits/social/Posts.jsx":"7f4477f748cf","ui_kits/website/App.jsx":"ab70a98c26d2","ui_kits/website/Sections.jsx":"55c4b94fb3bb","ui_kits/website/data.js":"bc106926f16c"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"TheHairStudioDesignSystem_03d078","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"Logo","sourcePath":"components/core/Logo.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Card","sourcePath":"components/display/Card.jsx"},{"name":"HaircutScene","sourcePath":"components/display/HaircutScene.jsx"},{"name":"PhotoFrame","sourcePath":"components/display/PhotoFrame.jsx"},{"name":"Rating","sourcePath":"components/display/Rating.jsx"},{"name":"ServiceRow","sourcePath":"components/display/ServiceRow.jsx"},{"name":"StylistCard","sourcePath":"components/display/StylistCard.jsx"},{"name":"Testimonial","sourcePath":"components/display/Testimonial.jsx"},{"name":"WorkTile","sourcePath":"components/display/WorkTile.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"RadioGroup","sourcePath":"components/forms/RadioGroup.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Textarea","sourcePath":"components/forms/Textarea.jsx"},{"name":"Footer","sourcePath":"components/navigation/Footer.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"73c3efba7c5d","components/core/Button.jsx":"86bccee65fd1","components/core/Divider.jsx":"dab554ef70f6","components/core/Icon.jsx":"682e34733bb3","components/core/IconButton.jsx":"b7af9f973776","components/core/Logo.jsx":"6151e4315740","components/core/SectionHeading.jsx":"3b47aea23d21","components/core/Tag.jsx":"ae4c7e798c2d","components/display/Card.jsx":"7a49f48b2b0a","components/display/HaircutScene.jsx":"4ec1d74d40f6","components/display/PhotoFrame.jsx":"dcd812e57362","components/display/Rating.jsx":"286c13a7ba03","components/display/ServiceRow.jsx":"9d33ac2bd29f","components/display/StylistCard.jsx":"e02e2d89d551","components/display/Testimonial.jsx":"d190dcc1a45d","components/display/WorkTile.jsx":"0cf9538ece54","components/feedback/Dialog.jsx":"246513e612f8","components/feedback/EmptyState.jsx":"228cd9922ac5","components/feedback/Toast.jsx":"c568909b5c6a","components/forms/Checkbox.jsx":"20296a039259","components/forms/Input.jsx":"d629d2659a33","components/forms/RadioGroup.jsx":"02709459d518","components/forms/Select.jsx":"5617241b162f","components/forms/Switch.jsx":"b09aeddc45e0","components/forms/Textarea.jsx":"3690d5bd1b4e","components/navigation/Footer.jsx":"6cdae1068ee9","components/navigation/NavBar.jsx":"12eef6a0dd75","components/navigation/Tabs.jsx":"7b0f40dcde74","ui_kits/booking/Booking.jsx":"2c06b5b11189","ui_kits/social/Posts.jsx":"7f4477f748cf","ui_kits/website/App.jsx":"4a8793976dec","ui_kits/website/Sections.jsx":"55c4b94fb3bb","ui_kits/website/data.js":"bc106926f16c"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -689,9 +689,11 @@ try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /**
  * The home hero background: a real-time 3D scene — the back of a woman's head,
- * her hair cut straight across by a travelling pair of scissors as the page
- * scrolls. The cut lengths fall away. Pure with respect to scroll: drive it
- * with `progress` 0→1.
+ * her freshly gloss-treated hair gathered, then cut with a single snip as the
+ * page scrolls. The camera pushes in from the wide figure to a close-up of the
+ * lock; the cut fall drops away and the fresh edge springs back. Pure with
+ * respect to scroll: drive it with `progress` 0→1 — any frame is reproducible
+ * from `progress` alone, and nothing animates while the page is idle.
  *
  * three.js is read from `window.THREE`, which the host page loads through the
  * pinned import map (see ui_kits/website/index.html). Until it resolves the
@@ -699,7 +701,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
  */
 function HaircutScene({
   progress = 0,
-  strands = 620,
+  strands = 2800,
   seed = 7,
   vignette = 0.62,
   style,
@@ -707,18 +709,25 @@ function HaircutScene({
 }) {
   const hostRef = React.useRef(null);
   const apiRef = React.useRef(null);
+  const progressRef = React.useRef(progress);
   const [ready, setReady] = React.useState(false);
+  progressRef.current = progress;
   React.useEffect(() => {
     let cancelled = false;
     let timer = 0;
     const tick = () => {
       if (cancelled) return;
       if (window.THREE && hostRef.current) {
-        apiRef.current = buildScene(window.THREE, hostRef.current, {
-          strands,
-          seed
-        });
-        setReady(true);
+        try {
+          apiRef.current = buildScene(window.THREE, hostRef.current, {
+            strands,
+            seed
+          });
+          apiRef.current.setProgress(progressRef.current);
+          setReady(true);
+        } catch (e) {
+          apiRef.current = null; // context creation failed — stay flat black, never take the page down
+        }
       } else {
         timer = window.setTimeout(tick, 60);
       }
@@ -763,17 +772,27 @@ function HaircutScene({
 
 /* ── scene ─────────────────────────────────────────────────────────────── */
 
-const CUT_Y = 0.02;
+const CUT_Y = 0.02; // world height of the cut line
+const SNIP_P = 0.75; // scroll progress at which the blades close
+const LOCK_Z = 0.40; // z-plane the gathered lock hangs in
 const HEAD_C = [0, 1.34, 0];
 const HEAD_R = 0.50;
 function buildScene(THREE, host, {
   strands,
   seed
 }) {
-  let s = seed;
+  /* Park–Miller: the multiply stays under 2^53, so the sequence is exact in doubles */
+  let s = (seed % 2147483646 + 2147483646) % 2147483646 + 1;
   const rnd = () => {
-    s = (s * 1103515245 + 12345) % 2147483648;
-    return s / 2147483648;
+    s = s * 16807 % 2147483647;
+    return s / 2147483647;
+  };
+  const gauss = () => (rnd() + rnd() + rnd() - 1.5) * 0.82;
+  const clamp01 = v => Math.max(0, Math.min(1, v));
+  const mix = (a, b, t) => a + (b - a) * t;
+  const sstep = (a, b, x) => {
+    const t = clamp01((x - a) / (b - a));
+    return t * t * (3 - 2 * t);
   };
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
@@ -794,10 +813,10 @@ function buildScene(THREE, host, {
     display: 'block'
   });
   const scene = new THREE.Scene();
-  scene.environment = studioEnvironment(THREE);
+  const envTex = studioEnvironment(THREE);
+  scene.environment = envTex;
   scene.environmentIntensity = 0.55;
-  const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
-  const camTarget = new THREE.Vector3(0, 0.46, 0);
+  const camera = new THREE.PerspectiveCamera(32, 1, 0.05, 100);
   scene.add(new THREE.AmbientLight(0xfff6ea, 0.14));
   const key = new THREE.DirectionalLight(0xfff3e2, 1.5);
   key.position.set(2.4, 3.2, 2.6);
@@ -817,13 +836,15 @@ function buildScene(THREE, host, {
     name: 'figure',
     color: 0x0f0e0d,
     roughness: 0.78,
-    metalness: 0.04
+    metalness: 0.04,
+    envMapIntensity: 0.18
   });
   const cloth = new THREE.MeshStandardMaterial({
     name: 'cape',
-    color: 0x090909,
-    roughness: 0.94,
-    metalness: 0.0
+    color: 0x030303,
+    roughness: 1.0,
+    metalness: 0.0,
+    envMapIntensity: 0.05
   });
   const figure = new THREE.Group();
   figure.name = 'figure';
@@ -841,171 +862,271 @@ function buildScene(THREE, host, {
   shoulders.rotation.z = Math.PI / 2;
   shoulders.position.set(0, 0.56, -0.04);
   figure.add(shoulders);
-  const back = new THREE.Mesh(new THREE.CylinderGeometry(0.44, 0.86, 2.6, 36), cloth);
+  const back = new THREE.Mesh(new THREE.CylinderGeometry(0.40, 0.72, 2.6, 36), cloth);
   back.name = 'cape';
-  back.position.set(0, -0.78, -0.06);
+  back.position.set(0, -0.78, -0.12);
   back.scale.z = 0.6;
   figure.add(back);
   scene.add(figure);
 
-  /* ── hair ── */
-  const NAPE_PHI = 1.95;
-  const strandData = [];
-  for (let i = 0; i < strands; i++) {
-    const az = (rnd() * 2 - 1) * 1.46;
-    const azDrift = (rnd() - 0.5) * 0.42;
-    const phi0 = 0.10 + Math.pow(rnd(), 0.7) * 1.55;
-    const shell = HEAD_R + 0.012 + rnd() * 0.075;
-    const radius = 0.0016 + rnd() * rnd() * 0.0032;
-    const tone = new THREE.Color().lerpColors(new THREE.Color(0xcaa974), new THREE.Color(0x1b1410), Math.pow(rnd(), 0.55));
-    const flare = 0.06 + rnd() * 0.30;
-    const curl = (rnd() - 0.5) * 0.26;
-    const wave = 2.4 + rnd() * 3.6;
-    const tipY = CUT_Y - (0.34 + Math.pow(rnd(), 1.3) * 1.5);
-    const sway = (rnd() - 0.5) * 1.1;
-    const spin = (rnd() - 0.5) * 3.2;
-    const pts = [];
-    const N = 9;
-    for (let k = 0; k <= N; k++) {
-      const u = k / N;
-      const phi = phi0 + (NAPE_PHI - phi0) * u;
-      const a = az + azDrift * u * u;
-      pts.push(new THREE.Vector3(HEAD_C[0] + shell * Math.sin(phi) * Math.sin(a), HEAD_C[1] + shell * Math.cos(phi), HEAD_C[2] + shell * Math.sin(phi) * Math.cos(a)));
-    }
-    const exit = pts[pts.length - 1].clone();
-    const M = 12;
-    for (let k = 1; k <= M; k++) {
-      const u = k / M;
-      const y = exit.y + (tipY - exit.y) * u;
-      pts.push(new THREE.Vector3(exit.x + Math.sin(az) * flare * u * u + curl * Math.sin(u * wave), y, exit.z * (1 - 0.30 * u) + curl * 0.7 * Math.cos(u * wave * 0.8)));
-    }
-    const curve = new THREE.CatmullRomCurve3(pts);
-    strandData.push({
-      curve,
-      radius,
-      tone,
-      tipY,
-      sway,
-      spin
+  /* ── hair: clump-groomed ribbons ─────────────────────────────────────── */
+
+  const CLUMP_N = 120;
+  const clumps = [];
+  for (let i = 0; i < CLUMP_N; i++) {
+    clumps.push({
+      az: (rnd() * 2 - 1) * 1.5,
+      waveFreq: 2.0 + rnd() * 3.0,
+      wavePhase: rnd() * 6.2831,
+      waveAmp: 0.006 + rnd() * 0.011,
+      flick: (rnd() - 0.5) * 0.12,
+      lenVar: rnd() - 0.5,
+      highlight: rnd() < 0.075,
+      cr: rnd()
     });
   }
-  const sampleAt = (curve, y0, y1, n) => {
-    const out = [];
-    const dense = curve.getPoints(140);
-    const pick = targetY => {
-      let best = dense[0],
-        bd = Infinity;
-      for (const p of dense) {
-        const d = Math.abs(p.y - targetY);
-        if (d < bd) {
-          bd = d;
-          best = p;
+  const espresso = new THREE.Color(0x3a2318);
+  const nearBlack = new THREE.Color(0x140e0b);
+  const caramel = new THREE.Color(0x7a4c26);
+  const flyTone = new THREE.Color(0x6b4c33);
+
+  // growable per-vertex streams; converted to typed arrays once at the end
+  const A = {
+    pos: [],
+    tan: [],
+    side: [],
+    u: [],
+    w: [],
+    col: [],
+    rand: [],
+    idx: [],
+    vc: 0
+  };
+  const C = {
+    pos: [],
+    tan: [],
+    side: [],
+    u: [],
+    w: [],
+    col: [],
+    rand: [],
+    idx: [],
+    vc: 0,
+    piv: [],
+    delay: [],
+    spin: []
+  };
+  const pushRibbon = (B, pts, opts) => {
+    const n = pts.length;
+    const base = B.vc;
+    for (let i = 0; i < n; i++) {
+      const p = pts[i];
+      const t0 = pts[Math.max(0, i - 1)];
+      const t1 = pts[Math.min(n - 1, i + 1)];
+      const tx = t1.x - t0.x,
+        ty = t1.y - t0.y,
+        tz = t1.z - t0.z;
+      const tl = Math.sqrt(tx * tx + ty * ty + tz * tz) || 1;
+      const v = i / (n - 1);
+      const u = mix(opts.u0, opts.u1, v);
+      const w = opts.halfW * (0.70 + 0.30 * sstep(0.0, 0.12, u)) * mix(1, opts.tipTaper, sstep(0.70, 1.0, v));
+      for (const side of [-1, 1]) {
+        B.pos.push(p.x, p.y, p.z);
+        B.tan.push(tx / tl, ty / tl, tz / tl);
+        B.side.push(side);
+        B.u.push(u);
+        B.w.push(w);
+        B.col.push(opts.color.r, opts.color.g, opts.color.b);
+        B.rand.push(opts.rand[0], opts.rand[1]);
+        if (opts.cut) {
+          B.piv.push(opts.cut.pivot.x, opts.cut.pivot.y, opts.cut.pivot.z);
+          B.delay.push(opts.cut.delay);
+          B.spin.push(opts.cut.spin[0], opts.cut.spin[1]);
         }
       }
-      return best;
-    };
-    for (let k = 0; k <= n; k++) out.push(pick(y0 + (y1 - y0) * (k / n)).clone());
+    }
+    for (let i = 0; i < n - 1; i++) {
+      const a = base + i * 2;
+      B.idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2);
+    }
+    B.vc += n * 2;
+  };
+  const resample = (pts, n) => {
+    const d = [0];
+    for (let i = 1; i < pts.length; i++) d.push(d[i - 1] + pts[i].distanceTo(pts[i - 1]));
+    const total = d[d.length - 1] || 1;
+    const out = [];
+    let j = 0;
+    for (let k = 0; k < n; k++) {
+      const target = total * (k / (n - 1));
+      while (j < pts.length - 2 && d[j + 1] < target) j++;
+      const span = d[j + 1] - d[j] || 1;
+      out.push(pts[j].clone().lerp(pts[j + 1], clamp01((target - d[j]) / span)));
+    }
     return out;
   };
-  const attachedGeos = [],
-    attachedColors = [];
-  const cutGeos = [],
-    cutColors = [],
-    cutPivots = [],
-    cutThresholds = [],
-    cutSpins = [];
-  let minX = Infinity,
-    maxX = -Infinity;
-  const crossings = [];
-  for (const d of strandData) {
-    const dense = d.curve.getPoints(160);
-    let cross = null;
-    for (let k = 1; k < dense.length; k++) {
-      if (dense[k - 1].y >= CUT_Y && dense[k].y < CUT_Y) {
-        cross = dense[k].clone();
+  for (let i = 0; i < strands; i++) {
+    const c = clumps[rnd() * CLUMP_N | 0];
+    const isFly = rnd() < 0.045;
+    const az0 = Math.max(-1.55, Math.min(1.55, c.az + gauss() * 0.11));
+    const phi0 = 0.16 + Math.pow(rnd(), 0.75) * 1.34;
+    const shell = HEAD_R + 0.013 + rnd() * 0.045 + (isFly ? 0.03 + rnd() * 0.05 : 0);
+    const halfW = isFly ? 0.0006 + rnd() * 0.0006 : 0.0011 + rnd() * rnd() * 0.0018;
+    const tone = new THREE.Color().lerpColors(espresso, nearBlack, Math.pow(rnd(), 0.55));
+    if (c.highlight) tone.lerp(caramel, 0.16 + rnd() * 0.20);
+    if (isFly) tone.lerp(flyTone, 0.22);
+    tone.multiplyScalar(0.92 + rnd() * 0.16);
+    const tipY = isFly ? CUT_Y + 0.15 - rnd() * 0.9 : CUT_Y - (0.50 + c.lenVar * 0.13 + (rnd() - 0.5) * 0.06);
+    const exitPhi = 1.62 + 0.38 * Math.cos(az0 * 0.85) + rnd() * 0.05;
+
+    /* section A — hug the scalp shell from root to nape exit */
+    const raw = [];
+    const KA = 8;
+    for (let k = 0; k < KA; k++) {
+      const u = k / (KA - 1);
+      const phi = phi0 + (exitPhi - phi0) * u;
+      const a = az0 * (1 - 0.15 * u * u);
+      const r = shell + 0.018 * Math.sin(u * Math.PI);
+      raw.push(new THREE.Vector3(HEAD_C[0] + r * Math.sin(phi) * Math.sin(a), HEAD_C[1] + r * Math.cos(phi) * 1.15, HEAD_C[2] + r * Math.sin(phi) * Math.cos(a) * 1.05));
+    }
+
+    /* section B — the fall: clump wave, converge mid-length, flick at tip */
+    const E = raw[raw.length - 1];
+    const jx = gauss() * 0.02,
+      jz = gauss() * 0.02;
+    const dirOut = Math.abs(az0) < 0.18 ? rnd() < 0.5 ? -0.4 : 0.4 : Math.sign(az0);
+    const flickAmt = (0.02 + Math.abs(c.flick)) * 0.55 * (0.4 + 0.6 * sstep(0.1, 0.8, Math.abs(az0)));
+    const zTarget = 0.34 + 0.10 * Math.cos(az0 * 1.2);
+    const KB = 16;
+    for (let k = 1; k <= KB; k++) {
+      const v = k / KB;
+      const tight = 1 - 0.7 * sstep(0.06, 0.4, v) + 0.55 * sstep(0.78, 1, v);
+      const wobX = c.waveAmp * Math.sin(v * c.waveFreq * 3.0 + c.wavePhase) * (0.4 + 0.6 * v);
+      const wobZ = c.waveAmp * 0.6 * Math.cos(v * c.waveFreq * 2.4 + c.wavePhase * 1.3) * v;
+      raw.push(new THREE.Vector3(E.x * (1 - 0.32 * v) + wobX + jx * tight + dirOut * flickAmt * Math.pow(v, 3.2), E.y + (tipY - E.y) * v, mix(E.z, zTarget, Math.pow(v, 1.05)) + wobZ + jz * tight + flickAmt * 0.4 * Math.pow(v, 3.0)));
+    }
+
+    /* split at the cut line */
+    let crossIdx = -1,
+      crossPt = null;
+    for (let k = 1; k < raw.length; k++) {
+      if (raw[k - 1].y >= CUT_Y && raw[k].y < CUT_Y) {
+        const f = (raw[k - 1].y - CUT_Y) / (raw[k - 1].y - raw[k].y);
+        crossPt = raw[k - 1].clone().lerp(raw[k], f);
+        crossIdx = k;
         break;
       }
     }
-    crossings.push(cross);
-    if (cross) {
-      minX = Math.min(minX, cross.x);
-      maxX = Math.max(maxX, cross.x);
+    const arc = [0];
+    for (let k = 1; k < raw.length; k++) arc.push(arc[k - 1] + raw[k].distanceTo(raw[k - 1]));
+    const totalArc = arc[arc.length - 1];
+    const rand2 = [c.cr, rnd()];
+    if (crossPt) {
+      const upArc = arc[crossIdx - 1] + raw[crossIdx - 1].distanceTo(crossPt);
+      const uCut = upArc / totalArc;
+      const upRaw = raw.slice(0, crossIdx).concat([crossPt]);
+      const downRaw = [crossPt].concat(raw.slice(crossIdx));
+      pushRibbon(A, resample(upRaw, 21), {
+        u0: 0,
+        u1: uCut,
+        halfW,
+        tipTaper: 1.0,
+        color: tone,
+        rand: rand2
+      });
+      pushRibbon(C, resample(downRaw, 10), {
+        u0: uCut,
+        u1: 1,
+        halfW,
+        tipTaper: 0.4,
+        color: tone,
+        rand: rand2,
+        cut: {
+          pivot: crossPt,
+          delay: Math.min(0.6, Math.abs(crossPt.x * 0.48) * 1.2 + rnd() * 0.12),
+          spin: [(rnd() - 0.5) * 2.6, (rnd() - 0.5) * 1.2]
+        }
+      });
+    } else {
+      pushRibbon(A, resample(raw, 21), {
+        u0: 0,
+        u1: 1,
+        halfW,
+        tipTaper: 0.15,
+        color: tone,
+        rand: rand2
+      });
     }
   }
-  const span = Math.max(0.2, maxX - minX);
-  const startX = minX - 1.5;
-  const travel = span + 3.0;
-  strandData.forEach((d, i) => {
-    const cross = crossings[i];
-    const upperEnd = cross ? CUT_Y : d.tipY;
-    const upPts = sampleAt(d.curve, d.curve.getPoint(0).y, upperEnd, 14);
-    const gUp = new THREE.TubeGeometry(new THREE.CatmullRomCurve3(upPts), 22, d.radius, 4, false).toNonIndexed();
-    attachedGeos.push(gUp);
-    attachedColors.push(d.tone);
-    if (cross) {
-      const lowPts = sampleAt(d.curve, CUT_Y, d.tipY, 8);
-      const g = new THREE.TubeGeometry(new THREE.CatmullRomCurve3(lowPts), 12, d.radius, 4, false).toNonIndexed();
-      cutGeos.push(g);
-      cutColors.push(d.tone);
-      cutPivots.push(cross);
-      cutThresholds.push((cross.x - startX) / travel);
-      cutSpins.push([d.spin, d.sway]);
+  const buildGeo = (B, withCut) => {
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.BufferAttribute(Float32Array.from(B.pos), 3));
+    g.setAttribute('aTangent', new THREE.BufferAttribute(Float32Array.from(B.tan), 3));
+    g.setAttribute('aSide', new THREE.BufferAttribute(Float32Array.from(B.side), 1));
+    g.setAttribute('aU', new THREE.BufferAttribute(Float32Array.from(B.u), 1));
+    g.setAttribute('aWidth', new THREE.BufferAttribute(Float32Array.from(B.w), 1));
+    g.setAttribute('aColor', new THREE.BufferAttribute(Float32Array.from(B.col), 3));
+    g.setAttribute('aRand', new THREE.BufferAttribute(Float32Array.from(B.rand), 2));
+    if (withCut) {
+      g.setAttribute('aPivot', new THREE.BufferAttribute(Float32Array.from(B.piv), 3));
+      g.setAttribute('aDelay', new THREE.BufferAttribute(Float32Array.from(B.delay), 1));
+      g.setAttribute('aSpin', new THREE.BufferAttribute(Float32Array.from(B.spin), 2));
+    }
+    g.setIndex(new THREE.BufferAttribute(Uint32Array.from(B.idx), 1));
+    return g;
+  };
+  const hairUniformsFor = () => ({
+    uGather: {
+      value: 0
+    },
+    uSwayAmp: {
+      value: 0
+    },
+    uSwayPhase: {
+      value: 0
+    },
+    uLift: {
+      value: 0
+    },
+    uCutT: {
+      value: 0
     }
   });
-  const hairMatBase = {
-    roughness: 0.42,
-    metalness: 0.07,
-    vertexColors: true
-  };
-  const attachedMesh = new THREE.Mesh(mergeTubes(THREE, attachedGeos, attachedColors), new THREE.MeshStandardMaterial({
-    name: 'hair',
-    ...hairMatBase
-  }));
+  const uAtt = hairUniformsFor();
+  const uCut = hairUniformsFor();
+  const hairMaterial = (uniforms, cut) => new THREE.ShaderMaterial({
+    name: cut ? 'hair-cut' : 'hair',
+    uniforms,
+    defines: cut ? {
+      CUT: ''
+    } : {},
+    vertexShader: HAIR_VERT,
+    fragmentShader: HAIR_FRAG,
+    side: THREE.DoubleSide,
+    transparent: false,
+    alphaToCoverage: true
+  });
+  const attachedMesh = new THREE.Mesh(buildGeo(A, false), hairMaterial(uAtt, false));
   attachedMesh.name = 'hair-attached';
+  attachedMesh.frustumCulled = false;
   scene.add(attachedMesh);
-  const uProgress = {
-    value: 0
-  };
-  const cutGeo = mergeTubes(THREE, cutGeos, cutColors, {
-    pivots: cutPivots,
-    thresholds: cutThresholds,
-    spins: cutSpins
-  });
-  const cutMat = new THREE.MeshStandardMaterial({
-    name: 'hair-cut',
-    ...hairMatBase
-  });
-  cutMat.onBeforeCompile = sh => {
-    sh.uniforms.uProgress = uProgress;
-    sh.vertexShader = sh.vertexShader.replace('#include <common>', `#include <common>
-attribute vec3 aPivot;
-attribute float aThreshold;
-attribute vec2 aSpin;
-uniform float uProgress;
-mat3 rotZ(float a){float c=cos(a),s=sin(a);return mat3(c,-s,0.0,s,c,0.0,0.0,0.0,1.0);}
-mat3 rotX(float a){float c=cos(a),s=sin(a);return mat3(1.0,0.0,0.0,0.0,c,-s,0.0,s,c);}`).replace('#include <begin_vertex>', `
-float t = clamp((uProgress - aThreshold) / 0.34, 0.0, 1.0);
-float e = t * t;
-vec3 local = position - aPivot;
-local = rotZ(aSpin.x * e) * rotX(aSpin.x * 0.4 * e) * local;
-vec3 transformed = aPivot + local + vec3(aSpin.y * 0.6 * e, -2.4 * e, aSpin.y * 0.25 * e);`);
-  };
-  const cutMesh = new THREE.Mesh(cutGeo, cutMat);
+  const cutMesh = new THREE.Mesh(buildGeo(C, true), hairMaterial(uCut, true));
   cutMesh.name = 'hair-cut';
+  cutMesh.frustumCulled = false;
   scene.add(cutMesh);
 
-  /* ── scissors ── */
+  /* ── shears ── */
   const steel = new THREE.MeshStandardMaterial({
     name: 'steel',
-    color: 0xf4f6f8,
-    metalness: 0.52,
-    roughness: 0.15
+    color: 0xc9d0d6,
+    metalness: 0.95,
+    roughness: 0.22
   });
   const steelDark = new THREE.MeshStandardMaterial({
     name: 'steel-dark',
-    color: 0xb9c0c7,
-    metalness: 0.62,
-    roughness: 0.26
+    color: 0x8f979f,
+    metalness: 0.95,
+    roughness: 0.30
   });
   const handleMat = new THREE.MeshStandardMaterial({
     name: 'handle',
@@ -1022,36 +1143,36 @@ vec3 transformed = aPivot + local + vec3(aSpin.y * 0.6 * e, -2.4 * e, aSpin.y * 
   const scissors = new THREE.Group();
   scissors.name = 'scissors';
   const bladeShape = new THREE.Shape();
-  bladeShape.moveTo(0, -0.036);
-  bladeShape.lineTo(0.60, -0.003);
-  bladeShape.quadraticCurveTo(0.628, 0.0, 0.60, 0.004);
-  bladeShape.lineTo(0.05, 0.054);
-  bladeShape.quadraticCurveTo(0, 0.058, 0, 0.036);
+  bladeShape.moveTo(0, -0.030);
+  bladeShape.lineTo(0.68, -0.0025);
+  bladeShape.quadraticCurveTo(0.705, 0.0, 0.68, 0.0035);
+  bladeShape.lineTo(0.05, 0.046);
+  bladeShape.quadraticCurveTo(0, 0.050, 0, 0.030);
   bladeShape.closePath();
   const bladeGeo = new THREE.ExtrudeGeometry(bladeShape, {
-    depth: 0.015,
+    depth: 0.012,
     bevelEnabled: true,
-    bevelSize: 0.0035,
-    bevelThickness: 0.0025,
+    bevelSize: 0.003,
+    bevelThickness: 0.002,
     bevelSegments: 2,
     curveSegments: 12
   });
-  bladeGeo.translate(0, 0, -0.0075);
+  bladeGeo.translate(0, 0, -0.006);
   const shankShape = new THREE.Shape();
-  shankShape.moveTo(0, -0.033);
-  shankShape.lineTo(-0.27, -0.026);
-  shankShape.lineTo(-0.27, 0.026);
-  shankShape.lineTo(0, 0.040);
+  shankShape.moveTo(0, -0.028);
+  shankShape.lineTo(-0.26, -0.022);
+  shankShape.lineTo(-0.26, 0.022);
+  shankShape.lineTo(0, 0.034);
   shankShape.closePath();
   const shankGeo = new THREE.ExtrudeGeometry(shankShape, {
-    depth: 0.013,
+    depth: 0.011,
     bevelEnabled: true,
-    bevelSize: 0.0025,
-    bevelThickness: 0.0025,
+    bevelSize: 0.0022,
+    bevelThickness: 0.0022,
     bevelSegments: 2
   });
-  shankGeo.translate(0, 0, -0.0065);
-  const ringGeo = new THREE.TorusGeometry(0.115, 0.019, 16, 40);
+  shankGeo.translate(0, 0, -0.0055);
+  const ringGeo = new THREE.TorusGeometry(0.085, 0.010, 16, 40);
   const arms = [];
   for (const dir of [1, -1]) {
     const arm = new THREE.Group();
@@ -1059,58 +1180,84 @@ vec3 transformed = aPivot + local + vec3(aSpin.y * 0.6 * e, -2.4 * e, aSpin.y * 
     const blade = new THREE.Mesh(bladeGeo, dir > 0 ? steel : steelDark);
     blade.name = dir > 0 ? 'blade-face-upper' : 'blade-face-lower';
     blade.scale.y = dir;
-    blade.position.z = dir * 0.010;
+    blade.position.z = dir * 0.009;
     arm.add(blade);
     const shank = new THREE.Mesh(shankGeo, dir > 0 ? steel : steelDark);
     shank.name = dir > 0 ? 'shank-upper' : 'shank-lower';
     shank.scale.y = dir;
-    shank.position.z = dir * 0.010;
+    shank.position.z = dir * 0.009;
     arm.add(shank);
     const ring = new THREE.Mesh(ringGeo, handleMat);
     ring.name = dir > 0 ? 'ring-upper' : 'ring-lower';
-    ring.position.set(-0.375, dir * 0.09, dir * 0.010);
+    ring.position.set(-0.345, dir * 0.095, dir * 0.009);
     ring.rotation.y = Math.PI / 2;
-    ring.rotation.x = dir * 0.2;
-    ring.scale.set(1, 1.16, 1);
+    ring.rotation.x = dir * 0.04;
+    ring.scale.set(1, 1.10, 1);
     arm.add(ring);
     scissors.add(arm);
     arms.push(arm);
   }
-  const pivotScrew = new THREE.Mesh(new THREE.CylinderGeometry(0.026, 0.026, 0.046, 24), pivotMat);
+  const pivotScrew = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, 0.036, 24), pivotMat);
   pivotScrew.name = 'pivot-screw';
   pivotScrew.rotation.x = Math.PI / 2;
   scissors.add(pivotScrew);
-  scissors.rotation.set(0.08, -0.34, 0.09);
-  scissors.scale.setScalar(0.98);
+  scissors.scale.setScalar(0.74);
   scene.add(scissors);
-  const spark = new THREE.PointLight(0xfff4e4, 9.0, 3.6, 2);
+  const spark = new THREE.PointLight(0xfff4e4, 0, 3.6, 2);
   spark.name = 'blade-light';
   scene.add(spark);
 
-  /* ── drive ── */
+  /* ── drive: every value below is a pure function of progress ── */
   let progress = 0;
+  let aspect = 1;
   const apply = () => {
-    const p = Math.max(0, Math.min(1, progress));
-    uProgress.value = p;
-    const bx = startX + p * travel;
-    scissors.position.set(bx, CUT_Y + 0.015, 1.08);
-    spark.position.set(bx + 0.32, CUT_Y + 0.22, 1.35);
-    const snip = 0.15 + 0.12 * Math.sin(p * Math.PI * 20);
-    arms[0].rotation.z = snip;
-    arms[1].rotation.z = -snip;
-    scissors.rotation.z = 0.09 + Math.sin(p * Math.PI * 6) * 0.025;
+    const p = clamp01(progress);
+
+    /* hair uniforms */
+    const gBase = sstep(0.30, 0.66, p);
+    uAtt.uGather.value = gBase * (1 - 0.55 * sstep(0.82, 1, p));
+    uCut.uGather.value = sstep(0.30, 0.66, Math.min(p, SNIP_P));
+    const swayAmp = 0.030 * sstep(0.04, 0.28, p) * (1 - sstep(0.52, 0.72, p));
+    uAtt.uSwayAmp.value = swayAmp;
+    uCut.uSwayAmp.value = swayAmp;
+    uAtt.uSwayPhase.value = uCut.uSwayPhase.value = 4.5 * p;
+    uCut.uCutT.value = clamp01((p - SNIP_P) / 0.24);
+    uAtt.uLift.value = 0.055 * sstep(SNIP_P, 0.84, p) - 0.032 * sstep(0.84, 1, p);
+
+    /* camera: wide figure → close-up on the lock */
+    const t1 = sstep(0, 0.62, p);
+    const creep = sstep(0.62, 1, p);
+    const wideZ = aspect < 1 ? 7.2 : aspect < 1.7 ? 6.4 : 5.9;
+    const closeZ = aspect < 1 ? 3.0 : aspect < 1.7 ? 2.25 : 2.05;
+    camera.position.set(0.16 * t1, mix(0.56, CUT_Y + 0.10, t1) - 0.04 * creep, mix(wideZ, closeZ, t1) - 0.12 * creep);
+    camera.fov = (aspect < 1 ? 48 : aspect < 1.7 ? 36 : 33) - 3 * t1;
+    camera.updateProjectionMatrix();
+    /* the target sits below the cut line so the snip plays in the upper
+       quarter of the frame — the part still uncovered late in the scroll;
+       the late creep keeps the fresh edge above the next section's cover line */
+    camera.lookAt(0.02 * t1, mix(0.46, CUT_Y - 0.22, t1) - 0.08 * creep, 0.20 * t1);
+
+    /* shears: glide in from the right, one snip, withdraw */
+    const enter = sstep(0.56, 0.72, p);
+    const closeT = sstep(0.725, 0.755, p);
+    const wd = sstep(0.80, 0.97, p);
+    scissors.visible = enter > 0.001 && wd < 0.999;
+    scissors.position.set(mix(2.1, 0.22, enter) + 1.7 * wd * wd, CUT_Y + 0.012 + 0.06 * (1 - enter) - 0.05 * wd, 0.47);
+    scissors.rotation.set(-0.16, Math.PI, -0.06 - 0.12 * wd);
+    const open = 0.20 * (1 - closeT) + 0.08 * sstep(0.80, 0.92, p);
+    arms[0].rotation.z = open;
+    arms[1].rotation.z = -open;
+    spark.position.set(scissors.position.x - 0.30, CUT_Y + 0.10, 0.72);
+    spark.intensity = 1.2 * enter * (1 - wd) + 5 * Math.exp(-Math.pow((p - 0.745) / 0.018, 2));
     renderer.render(scene, camera);
   };
   const resize = () => {
     const w = host.clientWidth || 1;
     const h = host.clientHeight || 1;
+    renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
     renderer.setSize(w, h, false);
-    const a = w / h;
-    camera.aspect = a;
-    camera.fov = a < 1 ? 48 : a < 1.7 ? 36 : 33;
-    camera.position.set(0, 0.56, a < 1.7 ? 6.4 : 5.9);
-    camera.lookAt(camTarget);
-    camera.updateProjectionMatrix();
+    aspect = w / h;
+    camera.aspect = aspect;
     apply();
   };
   const ro = new ResizeObserver(resize);
@@ -1127,56 +1274,149 @@ vec3 transformed = aPivot + local + vec3(aSpin.y * 0.6 * e, -2.4 * e, aSpin.y * 
         if (o.geometry) o.geometry.dispose();
         if (o.material) (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => m.dispose());
       });
+      envTex.dispose();
+      scene.environment = null;
       renderer.dispose();
       if (renderer.domElement.parentNode) renderer.domElement.parentNode.removeChild(renderer.domElement);
     }
   };
 }
 
-/** Concatenate non-indexed tube geometries into one, baking per-strand colour and cut attributes. */
-function mergeTubes(THREE, geos, colors, extra) {
-  let total = 0;
-  for (const g of geos) total += g.attributes.position.count;
-  const pos = new Float32Array(total * 3);
-  const nrm = new Float32Array(total * 3);
-  const col = new Float32Array(total * 3);
-  const piv = extra ? new Float32Array(total * 3) : null;
-  const thr = extra ? new Float32Array(total) : null;
-  const spn = extra ? new Float32Array(total * 2) : null;
-  let o = 0;
-  geos.forEach((g, i) => {
-    const n = g.attributes.position.count;
-    pos.set(g.attributes.position.array, o * 3);
-    nrm.set(g.attributes.normal.array, o * 3);
-    const c = colors[i];
-    for (let k = 0; k < n; k++) {
-      col[(o + k) * 3] = c.r;
-      col[(o + k) * 3 + 1] = c.g;
-      col[(o + k) * 3 + 2] = c.b;
-      if (extra) {
-        const p = extra.pivots[i];
-        piv[(o + k) * 3] = p.x;
-        piv[(o + k) * 3 + 1] = p.y;
-        piv[(o + k) * 3 + 2] = p.z;
-        thr[o + k] = extra.thresholds[i];
-        spn[(o + k) * 2] = extra.spins[i][0];
-        spn[(o + k) * 2 + 1] = extra.spins[i][1];
-      }
-    }
-    o += n;
-    g.dispose();
-  });
-  const merged = new THREE.BufferGeometry();
-  merged.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  merged.setAttribute('normal', new THREE.BufferAttribute(nrm, 3));
-  merged.setAttribute('color', new THREE.BufferAttribute(col, 3));
-  if (extra) {
-    merged.setAttribute('aPivot', new THREE.BufferAttribute(piv, 3));
-    merged.setAttribute('aThreshold', new THREE.BufferAttribute(thr, 1));
-    merged.setAttribute('aSpin', new THREE.BufferAttribute(spn, 2));
-  }
-  return merged;
+/* ── hair shaders: camera-facing ribbons, Kajiya–Kay dual highlight ────── */
+
+const HAIR_VERT = /* glsl */`
+attribute vec3 aTangent;
+attribute float aSide;
+attribute float aU;
+attribute float aWidth;
+attribute vec3 aColor;
+attribute vec2 aRand;
+#ifdef CUT
+attribute vec3 aPivot;
+attribute float aDelay;
+attribute vec2 aSpin;
+#endif
+uniform float uGather;
+uniform float uSwayAmp;
+uniform float uSwayPhase;
+uniform float uLift;
+uniform float uCutT;
+varying vec3 vColor;
+varying vec3 vT;
+varying vec3 vN;
+varying vec3 vWorld;
+varying float vU;
+varying float vSide;
+varying vec2 vRand;
+
+mat3 rotZ(float a){ float c = cos(a), s = sin(a); return mat3(c, -s, 0., s, c, 0., 0., 0., 1.); }
+mat3 rotX(float a){ float c = cos(a), s = sin(a); return mat3(1., 0., 0., 0., c, -s, 0., s, c); }
+
+vec3 gatherP(vec3 p, float g){
+  float wy = 1.0 - smoothstep(-0.02, 0.42, p.y);
+  float k = g * wy;
+  p.x = mix(p.x, p.x * 0.48, k);
+  p.z = mix(p.z, 0.40 + (p.z - 0.40) * 0.55, k);
+  return p;
 }
+
+void main(){
+  vec3 p = position;
+  vec3 T = aTangent;
+
+  float swPh = aRand.x * 6.2831 + uSwayPhase;
+  float sw = uSwayAmp * aU * aU;
+  p.x += sw * sin(swPh);
+  p.z += sw * 0.5 * cos(swPh * 0.8);
+  p = gatherP(p, uGather);
+
+#ifdef CUT
+  vec3 piv = gatherP(aPivot, uGather);
+  float t = clamp((uCutT - aDelay) / max(0.15, 1.0 - aDelay), 0.0, 1.0);
+  float e = t * t;
+  float wob = sin(t * 8.0 + aRand.y * 12.0);
+  mat3 R = rotZ(aSpin.x * (0.25 * t + 0.65 * e) + wob * 0.05 * t) * rotX(aSpin.y * (0.15 * t + 0.65 * e));
+  p = piv + R * (p - piv);
+  p.y -= 2.9 * e + 0.35 * t;
+  p.x += aSpin.y * 0.30 * e + wob * 0.02 * t;
+  p.z += aSpin.x * 0.08 * e;
+  T = R * T;
+#else
+  p.y += uLift * smoothstep(0.45, 1.0, aU);
+#endif
+
+  T = normalize(T);
+  vec3 toCam = normalize(cameraPosition - p);
+  vec3 S = normalize(cross(T, toCam));
+  vec3 world = p + S * (aWidth * aSide);
+  vN = normalize(cross(S, T));
+  vT = T;
+  vU = aU;
+  vColor = aColor;
+  vRand = aRand;
+  vWorld = world;
+  vSide = aSide;
+  gl_Position = projectionMatrix * viewMatrix * vec4(world, 1.0);
+}
+`;
+const HAIR_FRAG = /* glsl */`
+varying vec3 vColor;
+varying vec3 vT;
+varying vec3 vN;
+varying vec3 vWorld;
+varying float vU;
+varying float vSide;
+varying vec2 vRand;
+
+float strandSpec(vec3 T, vec3 V, vec3 L, float ex){
+  vec3 H = normalize(L + V);
+  float TdH = dot(T, H);
+  float s = sqrt(max(0.0, 1.0 - TdH * TdH));
+  return pow(s, ex);
+}
+
+void main(){
+  vec3 V = normalize(cameraPosition - vWorld);
+  vec3 T = normalize(vT);
+  vec3 N = normalize(vN);
+  if (!gl_FrontFacing) N = -N;
+
+  vec3 base = vColor;
+  base *= 0.30 + 0.70 * smoothstep(0.0, 0.30, vU);
+  base = mix(base, base * vec3(1.18, 1.06, 0.94), 0.28 * smoothstep(0.55, 1.0, vU));
+
+  vec3 L1 = normalize(vec3(0.55, 0.75, 0.55));  vec3 C1 = vec3(1.0, 0.94, 0.84) * 1.25;
+  vec3 L2 = normalize(vec3(-0.70, 0.35, -0.55)); vec3 C2 = vec3(1.0, 0.70, 0.58) * 1.05;
+  vec3 L3 = normalize(vec3(-0.08, 0.18, 0.98));  vec3 C3 = vec3(0.92, 0.87, 0.82) * 0.30;
+
+  vec3 col = vec3(0.0);
+  #define HAIR_DIFF(Ld) (pow(sqrt(max(0.0, 1.0 - dot(T, Ld) * dot(T, Ld))), 1.3) * (0.32 + 0.68 * clamp(dot(N, Ld) * 0.5 + 0.5, 0.0, 1.0)))
+  col += base * C1 * HAIR_DIFF(L1);
+  col += base * C2 * HAIR_DIFF(L2);
+  col += base * C3 * HAIR_DIFF(L3);
+  col += base * mix(vec3(0.055, 0.05, 0.055), vec3(0.17, 0.16, 0.165), N.y * 0.5 + 0.5);
+
+  float jitter = vRand.y - 0.5;
+  vec3 T1 = normalize(T + N * (-0.10 + jitter * 0.08));
+  vec3 T2 = normalize(T + N * ( 0.10 + jitter * 0.10));
+  float sparkle = 0.65 + 0.55 * fract(vRand.y * 37.13);
+  col += vec3(1.0, 0.93, 0.80) * strandSpec(T1, V, L1, 240.0) * 0.70 * sparkle;
+  col += (base * 1.6 + vec3(0.02)) * strandSpec(T2, V, L1, 60.0);
+  col += vec3(1.0, 0.80, 0.66) * strandSpec(T1, V, L2, 180.0) * 0.55 * sparkle;
+
+  // inner layers of the fall sit deeper in z — darken them for volume
+  float occ = mix(1.0, 0.55 + 0.45 * smoothstep(0.05, 0.42, vWorld.z), 1.0 - smoothstep(0.30, 0.80, vWorld.y));
+  col *= occ;
+
+  col *= 1.05;
+  col = (col * (2.51 * col + 0.03)) / (col * (2.43 * col + 0.59) + 0.14);
+  col = clamp(col, 0.0, 1.0);
+  col = pow(col, vec3(0.4545));
+
+  float alpha = 1.0 - smoothstep(0.55, 1.0, abs(vSide)) * 0.6;
+  gl_FragColor = vec4(col, alpha);
+}
+`;
 
 /** A gradient equirect map so the steel reads as metal without an HDR file. */
 function studioEnvironment(THREE) {
@@ -3751,7 +3991,7 @@ function App() {
   const onScroll = e => {
     const y = e.target.scrollTop;
     setScrolled(y > 40);
-    setProgress(Math.max(0, Math.min(1, y / (e.target.clientHeight * 1.15))));
+    setProgress(Math.max(0, Math.min(1, y / (e.target.clientHeight * 0.72))));
   };
   const book = () => window.open(window.THS.studio.booking, '_blank');
   const pages = {

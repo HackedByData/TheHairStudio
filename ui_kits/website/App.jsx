@@ -31,7 +31,7 @@ function App() {
   const onScroll = (e) => {
     const y = e.target.scrollTop;
     setScrolled(y > 40);
-    setProgress(Math.max(0, Math.min(1, y / (e.target.clientHeight * 1.15))));
+    setProgress(Math.max(0, Math.min(1, y / (e.target.clientHeight * 0.72))));
   };
   const book = () => window.open(window.THS.studio.booking, '_blank');
 
