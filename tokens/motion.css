@@ -1,0 +1,16 @@
+:root{
+  --dur-instant:90ms; /* @kind other */
+  --dur-fast:140ms; /* @kind other */
+  --dur-base:240ms; /* @kind other */
+  --dur-slow:480ms; /* @kind other */
+  --dur-reveal:900ms; /* @kind other */
+
+  --ease-standard:cubic-bezier(.22,.61,.36,1); /* @kind other */
+  --ease-out-soft:cubic-bezier(.16,1,.30,1); /* @kind other */
+  --ease-in-out:cubic-bezier(.65,.05,.36,1); /* @kind other */
+  --ease-exit:cubic-bezier(.4,0,1,1); /* @kind other */
+
+  --transition-color:color var(--dur-fast) var(--ease-standard),background-color var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard); /* @kind other */
+  --transition-transform:transform var(--dur-base) var(--ease-out-soft); /* @kind other */
+  --transition-all:all var(--dur-base) var(--ease-standard); /* @kind other */
+}

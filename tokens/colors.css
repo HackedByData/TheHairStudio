@@ -1,0 +1,76 @@
+:root{
+  /* ── Black scale — the interior. Every surface starts here. ── */
+  --black-void:#000000;
+  --black-ink:#0B0B0B;
+  --black-raised:#141414;
+  --black-hover:#1C1C1C;
+  --black-pressed:#080808;
+  --black-overlay:rgba(0,0,0,.72);
+
+  /* ── Bone / greige — warm light neutrals, from the salon's print work ── */
+  --bone-50:#FAF8F5;
+  --bone-100:#F2EDE6;
+  --bone-200:#E4DCCF;
+  --greige-300:#CFC5B7;
+  --greige-400:#A79C8D;
+  --stone-500:#6E665C;
+  --stone-600:#4A443D;
+
+  /* ── Oxblood — the single accent. Deep salon red, never bright. ── */
+  --accent-200:#EFC9CD;
+  --accent-300:#D4949B;
+  --accent-400:#B3505E;
+  --accent-500:#8C1C2B;
+  --accent-600:#6D1521;
+  --accent-700:#4B0E17;
+
+  /* ── Semantic status — muted, desaturated, never candy ── */
+  --green-500:#7FA37A;
+  --green-900:#16211A;
+  --amber-500:#D9A441;
+  --amber-900:#241B0B;
+  --red-500:#C15F52;
+  --red-900:#26120F;
+  --blue-500:#7E97A8;
+  --blue-900:#111A20;
+
+  /* ── Lines & veils on black ── */
+  --line-faint:rgba(255,255,255,.06);
+  --line-hairline:rgba(255,255,255,.11);
+  --line-strong:rgba(255,255,255,.22);
+  --line-accent:rgba(140,28,43,.45);
+  --veil-8:rgba(255,255,255,.08);
+  --veil-4:rgba(255,255,255,.04);
+  --scrim-dark:rgba(0,0,0,.55);
+
+  /* ── Semantic aliases: use these in components ── */
+  --surface-page:var(--black-ink);
+  --surface-void:var(--black-void);
+  --surface-card:var(--black-raised);
+  --surface-card-hover:var(--black-hover);
+  --surface-inset:#0F0F0F;
+  --surface-light:var(--bone-50);
+  --surface-light-alt:var(--bone-100);
+  --surface-accent:var(--accent-500);
+
+  --text-primary:var(--bone-50);
+  --text-secondary:rgba(250,248,245,.68);
+  --text-muted:rgba(250,248,245,.44);
+  --text-disabled:rgba(250,248,245,.26);
+  --text-accent:var(--accent-300);
+  --text-on-light:#111111;
+  --text-on-light-muted:var(--stone-500);
+  --text-on-accent:#FAF8F5;
+
+  --border-default:var(--line-hairline);
+  --border-strong:var(--line-strong);
+  --border-accent:var(--line-accent);
+  --border-on-light:rgba(17,17,17,.14);
+
+  --focus-ring:var(--accent-400);
+
+  --status-confirmed:var(--green-500);
+  --status-pending:var(--amber-500);
+  --status-cancelled:var(--red-500);
+  --status-info:var(--blue-500);
+}

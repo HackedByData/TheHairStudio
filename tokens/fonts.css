@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Karla:ital,wght@0,300..800;1,300..700&family=Sacramento&display=swap");
+
+:root{
+  --font-display:"Bodoni Moda",'Didot','Bodoni MT',Georgia,serif;
+  --font-sans:"Karla",'Helvetica Neue',Helvetica,Arial,sans-serif;
+  --font-script:"Sacramento",'Snell Roundhand',cursive;
+  --font-mono:ui-monospace,'SF Mono',Menlo,monospace;
+}

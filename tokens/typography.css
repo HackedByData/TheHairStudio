@@ -1,0 +1,35 @@
+:root{
+  /* Weights */
+  --weight-light:300; /* @kind other */
+  --weight-regular:400; /* @kind other */
+  --weight-medium:500; /* @kind other */
+  --weight-semibold:600; /* @kind other */
+  --weight-bold:700; /* @kind other */
+
+  /* Display — Bodoni Moda, always all-caps, always widely tracked */
+  --display-1-size:88px;   --display-1-line:0.96; /* @kind other */ --display-1-track:0.14em; /* @kind other */
+  --display-2-size:64px;   --display-2-line:1.00; /* @kind other */ --display-2-track:0.14em; /* @kind other */
+  --display-3-size:44px;   --display-3-line:1.08; /* @kind other */ --display-3-track:0.12em; /* @kind other */
+
+  /* Headings — Bodoni Moda, mixed case allowed from h3 down */
+  --h1-size:36px; --h1-line:1.16; /* @kind other */ --h1-track:0.06em; /* @kind other */
+  --h2-size:28px; --h2-line:1.22; /* @kind other */ --h2-track:0.05em; /* @kind other */
+  --h3-size:22px; --h3-line:1.30; /* @kind other */ --h3-track:0.02em; /* @kind other */
+  --h4-size:18px; --h4-line:1.36; /* @kind other */ --h4-track:0.01em; /* @kind other */
+
+  /* Body — Karla */
+  --body-lg-size:18px; --body-lg-line:1.66; /* @kind other */
+  --body-size:16px;    --body-line:1.70; /* @kind other */
+  --body-sm-size:14px; --body-sm-line:1.60; /* @kind other */
+  --caption-size:13px; --caption-line:1.50; /* @kind other */
+
+  /* Utility */
+  --overline-size:11px; --overline-track:0.22em; /* @kind other */
+  --label-size:12px;    --label-track:0.10em; /* @kind other */
+  --price-size:17px;
+
+  /* Semantic aliases */
+  --text-display:var(--font-display);
+  --text-body:var(--font-sans);
+  --text-flourish:var(--font-script);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Price list" description="Printable one-sheet service menu with dotted leaders and the starting-price disclaimer." -->
+<helmet><script src="./ds-base.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300..700&family=Karla:wght@300..700&family=Sacramento&display=swap"><style>@page{size:letter;margin:0}body{margin:0;background:#2a2a2a}@media print{body{background:#fff}.sheet{box-shadow:none!important}}</style></helmet>
+<div style="min-height:100vh;display:flex;justify-content:center;padding:32px 0;font-family:'Karla',sans-serif">
+<div class="sheet" style="width:816px;min-height:1056px;background:#0B0B0B;box-shadow:0 30px 90px rgba(0,0,0,.6);padding:64px 60px 56px;display:flex;flex-direction:column;box-sizing:border-box">
+<div style="text-align:center">
+<div style="font-family:'Bodoni Moda',serif;font-weight:300;font-size:26px;letter-spacing:.42em;text-indent:.42em;text-transform:uppercase;color:#FAF8F5">The Hair</div>
+<div style="font-family:'Bodoni Moda',serif;font-weight:300;font-size:52px;letter-spacing:.22em;text-indent:.22em;text-transform:uppercase;color:#FAF8F5;margin-top:6px">Studio</div>
+<div style="display:flex;align-items:center;gap:14px;justify-content:center;margin:26px 0 0"><span style="width:70px;height:1px;background:rgba(140,28,43,.5)"></span><span style="width:5px;height:5px;background:#8C1C2B;transform:rotate(45deg)"></span><span style="width:70px;height:1px;background:rgba(140,28,43,.5)"></span></div>
+<div style="margin-top:22px;font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#B3505E">Pricing List</div>
+</div>
+<div style="background:#F2EDE6;border-radius:14px;padding:44px 48px;margin-top:38px;flex:1">
+<div style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:30px;letter-spacing:.07em;text-transform:uppercase;color:#111;text-align:center">Haircuts &amp; Styling</div>
+<div style="height:1px;background:rgba(17,17,17,.14);margin:14px 0 6px"></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Women's Haircut</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$75</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Girls' Haircut</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$50</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Men's Haircut</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$40</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Blowout</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$65</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Style / Updo</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$85</span></div>
+<div style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:30px;letter-spacing:.07em;text-transform:uppercase;color:#111;text-align:center;margin-top:34px">Color Services</div>
+<div style="height:1px;background:rgba(17,17,17,.14);margin:14px 0 6px"></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Root Touch-Up</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$110</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Full Highlights</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$285</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Full Hair Color</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$160</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Balayage</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$295</span></div>
+<div style="font-family:'Bodoni Moda',serif;font-weight:400;font-size:30px;letter-spacing:.07em;text-transform:uppercase;color:#111;text-align:center;margin-top:34px">Treatments &amp; Specials</div>
+<div style="height:1px;background:rgba(17,17,17,.14);margin:14px 0 6px"></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Deep Conditioning</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$30</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Brazilian Blowout</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$385</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;padding:7px 0"><span style="font-size:17px;color:#1a1a1a;white-space:nowrap">Cut &amp; Color Special</span><span style="flex:1;border-bottom:1px dotted rgba(17,17,17,.34);transform:translateY(-.3em)"></span><span style="font-size:17px;font-weight:700;color:#6D1521">$225</span></div>
+<div style="margin-top:32px;padding-top:18px;border-top:1px solid rgba(17,17,17,.14);text-align:center;font-size:13px;line-height:1.65;color:#57503f">*Starting prices are for bra length or shorter. Length and thickness are extra.<br>Hair length and density will be considered.</div>
+</div>
+<div style="text-align:center;margin-top:34px">
+<div style="font-family:'Sacramento',cursive;font-size:44px;line-height:1;color:#FAF8F5">Book an appointment today</div>
+<div style="margin-top:18px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#B3505E">16923 Sierra Lakes Pkwy Unit 107 · Fontana, CA 92336</div>
+<div style="margin-top:8px;font-size:13px;letter-spacing:.14em;color:rgba(250,248,245,.5)">(909) 365-4443 · @_thehairstudio_</div>
+</div>
+</div>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,21 @@
+:root{
+  /* On black, depth reads as a hairline first and a shadow second. */
+  --shadow-none:none;
+  --shadow-hairline:inset 0 0 0 1px var(--line-hairline);
+  --shadow-sm:0 1px 2px rgba(0,0,0,.65);
+  --shadow-md:0 8px 24px rgba(0,0,0,.55);
+  --shadow-lg:0 24px 60px rgba(0,0,0,.62);
+  --shadow-modal:0 40px 120px rgba(0,0,0,.78);
+
+  /* On bone surfaces, real (soft, warm) shadows are allowed. */
+  --shadow-light-sm:0 1px 2px rgba(30,24,16,.06);
+  --shadow-light-md:0 10px 30px rgba(30,24,16,.10);
+  --shadow-light-lg:0 30px 70px rgba(30,24,16,.14);
+
+  --glow-accent:0 0 0 1px rgba(140,28,43,.45),0 0 28px rgba(140,28,43,.16);
+  --ring-focus:0 0 0 2px var(--black-ink),0 0 0 4px var(--focus-ring);
+
+  --scrim-bottom:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.60) 38%,rgba(0,0,0,0) 100%); /* @kind other */
+  --scrim-top:linear-gradient(to bottom,rgba(0,0,0,.78) 0%,rgba(0,0,0,0) 70%); /* @kind other */
+  --blur-glass:saturate(120%) blur(18px); /* @kind other */
+}

@@ -1,0 +1,19 @@
+:root{
+  --container-max:1280px;
+  --container-narrow:760px;
+  --container-wide:1520px;
+  --header-height:76px;
+  --header-height-compact:60px;
+  --z-base:0; /* @kind other */
+  --z-sticky:100; /* @kind other */
+  --z-header:200; /* @kind other */
+  --z-overlay:300; /* @kind other */
+  --z-modal:400; /* @kind other */
+  --z-toast:500; /* @kind other */
+  --grid-columns:12; /* @kind other */
+  --grid-gap:24px;
+  --aspect-portrait:4 / 5; /* @kind other */
+  --aspect-square:1 / 1; /* @kind other */
+  --aspect-wide:16 / 9; /* @kind other */
+  --aspect-story:9 / 16; /* @kind other */
+}
