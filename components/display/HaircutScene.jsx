@@ -2,11 +2,13 @@ import React from 'react';
 
 /**
  * The home hero background: a real-time 3D scene — the back of a woman's head,
- * her freshly gloss-treated hair gathered, then cut with a single snip as the
- * page scrolls. The camera pushes in from the wide figure to a close-up of the
- * lock; the cut fall drops away and the fresh edge springs back. Pure with
- * respect to scroll: drive it with `progress` 0→1 — any frame is reproducible
- * from `progress` alone, and nothing animates while the page is idle.
+ * her dark hair transformed to a warm ombre as the page scrolls: the colour
+ * melts from the roots down through the lengths, the ends settle into soft
+ * layers, and the gloss builds to a finished-treatment shine. The camera
+ * pushes in from the wide figure to a close-up of the lengths. No scissors —
+ * this is the colour chair, not the cutting chair. Pure with respect to
+ * scroll: drive it with `progress` 0→1 — any frame is reproducible from
+ * `progress` alone, and nothing animates while the page is idle.
  *
  * three.js is read from `window.THREE`, which the host page loads through the
  * pinned import map (see ui_kits/website/index.html). Until it resolves the
@@ -64,9 +66,7 @@ export function HaircutScene({ progress = 0, strands = 2800, seed = 7, vignette 
 
 /* ── scene ─────────────────────────────────────────────────────────────── */
 
-const CUT_Y = 0.02;      // world height of the cut line
-const SNIP_P = 0.75;     // scroll progress at which the blades close
-const LOCK_Z = 0.40;     // z-plane the gathered lock hangs in
+const FOCUS_Y = 0.02;    // world height the camera settles on — the lengths band
 const HEAD_C = [0, 1.34, 0];
 const HEAD_R = 0.50;
 
@@ -140,7 +140,7 @@ function buildScene(THREE, host, { strands, seed }) {
 
   scene.add(figure);
 
-  /* ── hair: clump-groomed ribbons ─────────────────────────────────────── */
+  /* ── hair: clump-groomed ribbons, two baked poses per strand ─────────── */
 
   const CLUMP_N = 120;
   const clumps = [];
@@ -163,43 +163,42 @@ function buildScene(THREE, host, { strands, seed }) {
   const flyTone = new THREE.Color(0x6b4c33);
 
   // growable per-vertex streams; converted to typed arrays once at the end
-  const A = { pos: [], tan: [], side: [], u: [], w: [], col: [], rand: [], idx: [], vc: 0 };
-  const C = { pos: [], tan: [], side: [], u: [], w: [], col: [], rand: [], idx: [], vc: 0, piv: [], delay: [], spin: [] };
+  const G = { pos: [], tan: [], posB: [], tanB: [], side: [], u: [], w: [], col: [], rand: [], stag: [], idx: [], vc: 0 };
 
-  const pushRibbon = (B, pts, opts) => {
-    const n = pts.length;
-    const base = B.vc;
+  const pushRibbon = (ptsA, ptsB, opts) => {
+    const n = ptsA.length;
+    const base = G.vc;
+    const tangentAt = (pts, i) => {
+      const a = pts[Math.max(0, i - 1)], b = pts[Math.min(n - 1, i + 1)];
+      const tx = b.x - a.x, ty = b.y - a.y, tz = b.z - a.z;
+      const l = Math.sqrt(tx * tx + ty * ty + tz * tz) || 1;
+      return [tx / l, ty / l, tz / l];
+    };
     for (let i = 0; i < n; i++) {
-      const p = pts[i];
-      const t0 = pts[Math.max(0, i - 1)];
-      const t1 = pts[Math.min(n - 1, i + 1)];
-      const tx = t1.x - t0.x, ty = t1.y - t0.y, tz = t1.z - t0.z;
-      const tl = Math.sqrt(tx * tx + ty * ty + tz * tz) || 1;
+      const pA = ptsA[i], pB = ptsB[i];
+      const tA = tangentAt(ptsA, i), tB = tangentAt(ptsB, i);
       const v = i / (n - 1);
-      const u = mix(opts.u0, opts.u1, v);
       const w = opts.halfW
-        * (0.70 + 0.30 * sstep(0.0, 0.12, u))
+        * (0.70 + 0.30 * sstep(0.0, 0.12, v))
         * mix(1, opts.tipTaper, sstep(0.70, 1.0, v));
       for (const side of [-1, 1]) {
-        B.pos.push(p.x, p.y, p.z);
-        B.tan.push(tx / tl, ty / tl, tz / tl);
-        B.side.push(side);
-        B.u.push(u);
-        B.w.push(w);
-        B.col.push(opts.color.r, opts.color.g, opts.color.b);
-        B.rand.push(opts.rand[0], opts.rand[1]);
-        if (opts.cut) {
-          B.piv.push(opts.cut.pivot.x, opts.cut.pivot.y, opts.cut.pivot.z);
-          B.delay.push(opts.cut.delay);
-          B.spin.push(opts.cut.spin[0], opts.cut.spin[1]);
-        }
+        G.pos.push(pA.x, pA.y, pA.z);
+        G.tan.push(tA[0], tA[1], tA[2]);
+        G.posB.push(pB.x, pB.y, pB.z);
+        G.tanB.push(tB[0], tB[1], tB[2]);
+        G.side.push(side);
+        G.u.push(v);
+        G.w.push(w);
+        G.col.push(opts.color.r, opts.color.g, opts.color.b);
+        G.rand.push(opts.rand[0], opts.rand[1]);
+        G.stag.push(opts.stagger);
       }
     }
     for (let i = 0; i < n - 1; i++) {
       const a = base + i * 2;
-      B.idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2);
+      G.idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2);
     }
-    B.vc += n * 2;
+    G.vc += n * 2;
   };
 
   const resample = (pts, n) => {
@@ -231,188 +230,104 @@ function buildScene(THREE, host, { strands, seed }) {
     tone.multiplyScalar(0.92 + rnd() * 0.16);
 
     const tipY = isFly
-      ? CUT_Y + 0.15 - rnd() * 0.9
-      : CUT_Y - (0.50 + c.lenVar * 0.13 + (rnd() - 0.5) * 0.06);
+      ? FOCUS_Y + 0.15 - rnd() * 0.9
+      : FOCUS_Y - (0.50 + c.lenVar * 0.13 + (rnd() - 0.5) * 0.06);
     const exitPhi = 1.62 + 0.38 * Math.cos(az0 * 0.85) + rnd() * 0.05;
 
-    /* section A — hug the scalp shell from root to nape exit */
-    const raw = [];
+    /* section A — hug the scalp shell from root to nape exit (shared by both poses) */
+    const scalp = [];
     const KA = 8;
     for (let k = 0; k < KA; k++) {
       const u = k / (KA - 1);
       const phi = phi0 + (exitPhi - phi0) * u;
       const a = az0 * (1 - 0.15 * u * u);
       const r = shell + 0.018 * Math.sin(u * Math.PI);
-      raw.push(new THREE.Vector3(
+      scalp.push(new THREE.Vector3(
         HEAD_C[0] + r * Math.sin(phi) * Math.sin(a),
         HEAD_C[1] + r * Math.cos(phi) * 1.15,
         HEAD_C[2] + r * Math.sin(phi) * Math.cos(a) * 1.05,
       ));
     }
 
-    /* section B — the fall: clump wave, converge mid-length, flick at tip */
-    const E = raw[raw.length - 1];
+    const E = scalp[scalp.length - 1];
     const jx = gauss() * 0.02, jz = gauss() * 0.02;
     const dirOut = Math.abs(az0) < 0.18 ? (rnd() < 0.5 ? -0.4 : 0.4) : Math.sign(az0);
     const flickAmt = (0.02 + Math.abs(c.flick)) * 0.55 * (0.4 + 0.6 * sstep(0.1, 0.8, Math.abs(az0)));
     const zTarget = 0.34 + 0.10 * Math.cos(az0 * 1.2);
     const KB = 16;
+
+    /* pose A — before: the straight dark fall, as the client sat down */
+    const rawA = scalp.slice();
     for (let k = 1; k <= KB; k++) {
       const v = k / KB;
       const tight = 1 - 0.7 * sstep(0.06, 0.4, v) + 0.55 * sstep(0.78, 1, v);
       const wobX = c.waveAmp * Math.sin(v * c.waveFreq * 3.0 + c.wavePhase) * (0.4 + 0.6 * v);
       const wobZ = c.waveAmp * 0.6 * Math.cos(v * c.waveFreq * 2.4 + c.wavePhase * 1.3) * v;
-      raw.push(new THREE.Vector3(
+      rawA.push(new THREE.Vector3(
         E.x * (1 - 0.32 * v) + wobX + jx * tight + dirOut * flickAmt * Math.pow(v, 3.2),
         E.y + (tipY - E.y) * v,
         mix(E.z, zTarget, Math.pow(v, 1.05)) + wobZ + jz * tight + flickAmt * 0.4 * Math.pow(v, 3.0),
       ));
     }
 
-    /* split at the cut line */
-    let crossIdx = -1, crossPt = null;
-    for (let k = 1; k < raw.length; k++) {
-      if (raw[k - 1].y >= CUT_Y && raw[k].y < CUT_Y) {
-        const f = (raw[k - 1].y - CUT_Y) / (raw[k - 1].y - raw[k].y);
-        crossPt = raw[k - 1].clone().lerp(raw[k], f);
-        crossIdx = k;
-        break;
-      }
+    /* pose B — after: layered lengths (outer shell and sides graduate shorter),
+       bigger softer waves, ends flipped out — the finished blowout */
+    const outerness = clamp01((shell - (HEAD_R + 0.013)) / 0.045);
+    const sideness = Math.abs(Math.sin(az0));
+    const layer = 0.7 * outerness + 0.3 * sideness;
+    const tipYB = Math.min(tipY + 0.65, FOCUS_Y - 0.52 + layer * 0.40 + (rnd() - 0.5) * 0.03);
+    const rawB = scalp.slice();
+    for (let k = 1; k <= KB; k++) {
+      const v = k / KB;
+      const tight = 1 - 0.7 * sstep(0.06, 0.4, v) + 0.55 * sstep(0.78, 1, v);
+      const wobX = c.waveAmp * 2.1 * Math.sin(v * c.waveFreq * 1.9 + c.wavePhase) * (0.35 + 0.65 * v);
+      const wobZ = c.waveAmp * 1.2 * Math.cos(v * c.waveFreq * 1.5 + c.wavePhase * 1.2) * v;
+      rawB.push(new THREE.Vector3(
+        E.x * (1 - 0.26 * v) + wobX + jx * tight + dirOut * flickAmt * 1.6 * Math.pow(v, 2.8),
+        E.y + (tipYB - E.y) * v,
+        mix(E.z, zTarget + 0.03, Math.pow(v, 1.02)) + wobZ + jz * tight + flickAmt * 0.9 * Math.pow(v, 2.6),
+      ));
     }
 
-    const arc = [0];
-    for (let k = 1; k < raw.length; k++) arc.push(arc[k - 1] + raw[k].distanceTo(raw[k - 1]));
-    const totalArc = arc[arc.length - 1];
-    const rand2 = [c.cr, rnd()];
-
-    if (crossPt) {
-      const upArc = arc[crossIdx - 1] + raw[crossIdx - 1].distanceTo(crossPt);
-      const uCut = upArc / totalArc;
-      const upRaw = raw.slice(0, crossIdx).concat([crossPt]);
-      const downRaw = [crossPt].concat(raw.slice(crossIdx));
-      pushRibbon(A, resample(upRaw, 21), { u0: 0, u1: uCut, halfW, tipTaper: 1.0, color: tone, rand: rand2 });
-      pushRibbon(C, resample(downRaw, 10), {
-        u0: uCut, u1: 1, halfW, tipTaper: 0.4, color: tone, rand: rand2,
-        cut: {
-          pivot: crossPt,
-          delay: Math.min(0.6, Math.abs(crossPt.x * 0.48) * 1.2 + rnd() * 0.12),
-          spin: [(rnd() - 0.5) * 2.6, (rnd() - 0.5) * 1.2],
-        },
-      });
-    } else {
-      pushRibbon(A, resample(raw, 21), { u0: 0, u1: 1, halfW, tipTaper: 0.15, color: tone, rand: rand2 });
-    }
+    pushRibbon(resample(rawA, 21), resample(rawB, 21), {
+      halfW, tipTaper: isFly ? 0.15 : 0.5, color: tone,
+      rand: [c.cr, rnd()], stagger: rnd(),
+    });
   }
 
-  const buildGeo = (B, withCut) => {
-    const g = new THREE.BufferGeometry();
-    g.setAttribute('position', new THREE.BufferAttribute(Float32Array.from(B.pos), 3));
-    g.setAttribute('aTangent', new THREE.BufferAttribute(Float32Array.from(B.tan), 3));
-    g.setAttribute('aSide', new THREE.BufferAttribute(Float32Array.from(B.side), 1));
-    g.setAttribute('aU', new THREE.BufferAttribute(Float32Array.from(B.u), 1));
-    g.setAttribute('aWidth', new THREE.BufferAttribute(Float32Array.from(B.w), 1));
-    g.setAttribute('aColor', new THREE.BufferAttribute(Float32Array.from(B.col), 3));
-    g.setAttribute('aRand', new THREE.BufferAttribute(Float32Array.from(B.rand), 2));
-    if (withCut) {
-      g.setAttribute('aPivot', new THREE.BufferAttribute(Float32Array.from(B.piv), 3));
-      g.setAttribute('aDelay', new THREE.BufferAttribute(Float32Array.from(B.delay), 1));
-      g.setAttribute('aSpin', new THREE.BufferAttribute(Float32Array.from(B.spin), 2));
-    }
-    g.setIndex(new THREE.BufferAttribute(Uint32Array.from(B.idx), 1));
-    return g;
-  };
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(Float32Array.from(G.pos), 3));
+  geo.setAttribute('aTangent', new THREE.BufferAttribute(Float32Array.from(G.tan), 3));
+  geo.setAttribute('aPosB', new THREE.BufferAttribute(Float32Array.from(G.posB), 3));
+  geo.setAttribute('aTanB', new THREE.BufferAttribute(Float32Array.from(G.tanB), 3));
+  geo.setAttribute('aSide', new THREE.BufferAttribute(Float32Array.from(G.side), 1));
+  geo.setAttribute('aU', new THREE.BufferAttribute(Float32Array.from(G.u), 1));
+  geo.setAttribute('aWidth', new THREE.BufferAttribute(Float32Array.from(G.w), 1));
+  geo.setAttribute('aColor', new THREE.BufferAttribute(Float32Array.from(G.col), 3));
+  geo.setAttribute('aRand', new THREE.BufferAttribute(Float32Array.from(G.rand), 2));
+  geo.setAttribute('aStagger', new THREE.BufferAttribute(Float32Array.from(G.stag), 1));
+  geo.setIndex(new THREE.BufferAttribute(Uint32Array.from(G.idx), 1));
 
-  const hairUniformsFor = () => ({
-    uGather: { value: 0 },
+  const uniforms = {
+    uStyleT: { value: 0 },
+    uColorT: { value: 0 },
     uSwayAmp: { value: 0 },
     uSwayPhase: { value: 0 },
-    uLift: { value: 0 },
-    uCutT: { value: 0 },
-  });
-  const uAtt = hairUniformsFor();
-  const uCut = hairUniformsFor();
+    uSheen: { value: 0 },
+  };
 
-  const hairMaterial = (uniforms, cut) => new THREE.ShaderMaterial({
-    name: cut ? 'hair-cut' : 'hair',
+  const hairMesh = new THREE.Mesh(geo, new THREE.ShaderMaterial({
+    name: 'hair',
     uniforms,
-    defines: cut ? { CUT: '' } : {},
     vertexShader: HAIR_VERT,
     fragmentShader: HAIR_FRAG,
     side: THREE.DoubleSide,
     transparent: false,
     alphaToCoverage: true,
-  });
-
-  const attachedMesh = new THREE.Mesh(buildGeo(A, false), hairMaterial(uAtt, false));
-  attachedMesh.name = 'hair-attached';
-  attachedMesh.frustumCulled = false;
-  scene.add(attachedMesh);
-
-  const cutMesh = new THREE.Mesh(buildGeo(C, true), hairMaterial(uCut, true));
-  cutMesh.name = 'hair-cut';
-  cutMesh.frustumCulled = false;
-  scene.add(cutMesh);
-
-  /* ── shears ── */
-  const steel = new THREE.MeshStandardMaterial({ name: 'steel', color: 0xc9d0d6, metalness: 0.95, roughness: 0.22 });
-  const steelDark = new THREE.MeshStandardMaterial({ name: 'steel-dark', color: 0x8f979f, metalness: 0.95, roughness: 0.30 });
-  const handleMat = new THREE.MeshStandardMaterial({ name: 'handle', color: 0x1d1d1f, metalness: 0.35, roughness: 0.44 });
-  const pivotMat = new THREE.MeshStandardMaterial({ name: 'pivot', color: 0x8c1c2b, metalness: 0.9, roughness: 0.3 });
-
-  const scissors = new THREE.Group();
-  scissors.name = 'scissors';
-
-  const bladeShape = new THREE.Shape();
-  bladeShape.moveTo(0, -0.030);
-  bladeShape.lineTo(0.68, -0.0025);
-  bladeShape.quadraticCurveTo(0.705, 0.0, 0.68, 0.0035);
-  bladeShape.lineTo(0.05, 0.046);
-  bladeShape.quadraticCurveTo(0, 0.050, 0, 0.030);
-  bladeShape.closePath();
-  const bladeGeo = new THREE.ExtrudeGeometry(bladeShape, { depth: 0.012, bevelEnabled: true, bevelSize: 0.003, bevelThickness: 0.002, bevelSegments: 2, curveSegments: 12 });
-  bladeGeo.translate(0, 0, -0.006);
-
-  const shankShape = new THREE.Shape();
-  shankShape.moveTo(0, -0.028);
-  shankShape.lineTo(-0.26, -0.022);
-  shankShape.lineTo(-0.26, 0.022);
-  shankShape.lineTo(0, 0.034);
-  shankShape.closePath();
-  const shankGeo = new THREE.ExtrudeGeometry(shankShape, { depth: 0.011, bevelEnabled: true, bevelSize: 0.0022, bevelThickness: 0.0022, bevelSegments: 2 });
-  shankGeo.translate(0, 0, -0.0055);
-
-  const ringGeo = new THREE.TorusGeometry(0.085, 0.010, 16, 40);
-  const arms = [];
-  for (const dir of [1, -1]) {
-    const arm = new THREE.Group();
-    arm.name = dir > 0 ? 'blade-upper' : 'blade-lower';
-    const blade = new THREE.Mesh(bladeGeo, dir > 0 ? steel : steelDark);
-    blade.name = dir > 0 ? 'blade-face-upper' : 'blade-face-lower';
-    blade.scale.y = dir; blade.position.z = dir * 0.009;
-    arm.add(blade);
-    const shank = new THREE.Mesh(shankGeo, dir > 0 ? steel : steelDark);
-    shank.name = dir > 0 ? 'shank-upper' : 'shank-lower';
-    shank.scale.y = dir; shank.position.z = dir * 0.009;
-    arm.add(shank);
-    const ring = new THREE.Mesh(ringGeo, handleMat);
-    ring.name = dir > 0 ? 'ring-upper' : 'ring-lower';
-    ring.position.set(-0.345, dir * 0.095, dir * 0.009);
-    ring.rotation.y = Math.PI / 2; ring.rotation.x = dir * 0.04;
-    ring.scale.set(1, 1.10, 1);
-    arm.add(ring);
-    scissors.add(arm);
-    arms.push(arm);
-  }
-  const pivotScrew = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, 0.036, 24), pivotMat);
-  pivotScrew.name = 'pivot-screw';
-  pivotScrew.rotation.x = Math.PI / 2;
-  scissors.add(pivotScrew);
-  scissors.scale.setScalar(0.74);
-  scene.add(scissors);
-
-  const spark = new THREE.PointLight(0xfff4e4, 0, 3.6, 2);
-  spark.name = 'blade-light';
-  scene.add(spark);
+  }));
+  hairMesh.name = 'hair';
+  hairMesh.frustumCulled = false;
+  scene.add(hairMesh);
 
   /* ── drive: every value below is a pure function of progress ── */
   let progress = 0;
@@ -421,51 +336,31 @@ function buildScene(THREE, host, { strands, seed }) {
   const apply = () => {
     const p = clamp01(progress);
 
-    /* hair uniforms */
-    const gBase = sstep(0.30, 0.66, p);
-    uAtt.uGather.value = gBase * (1 - 0.55 * sstep(0.82, 1, p));
-    uCut.uGather.value = sstep(0.30, 0.66, Math.min(p, SNIP_P));
-    const swayAmp = 0.030 * sstep(0.04, 0.28, p) * (1 - sstep(0.52, 0.72, p));
-    uAtt.uSwayAmp.value = swayAmp;
-    uCut.uSwayAmp.value = swayAmp;
-    uAtt.uSwayPhase.value = uCut.uSwayPhase.value = 4.5 * p;
-    uCut.uCutT.value = clamp01((p - SNIP_P) / 0.24);
-    uAtt.uLift.value = 0.055 * sstep(SNIP_P, 0.84, p) - 0.032 * sstep(0.84, 1, p);
+    /* the transformation: colour melts root→tip, then the layers settle,
+       then the gloss sweep — the client turning toward the mirror */
+    /* the melt front parks mid-length — an ombre keeps its dark roots, and
+       the close-up frame shows u≈0.6→1, so the gradient must live there */
+    uniforms.uColorT.value = 0.30 * sstep(0.12, 0.55, p);
+    uniforms.uStyleT.value = sstep(0.52, 0.90, p);
+    uniforms.uSheen.value = sstep(0.80, 1.0, p);
+    uniforms.uSwayAmp.value = 0.024 * sstep(0.03, 0.22, p) * (1 - sstep(0.55, 0.80, p)) + 0.006;
+    uniforms.uSwayPhase.value = 4.5 * p;
 
-    /* camera: wide figure → close-up on the lock */
+    /* camera: wide figure → close-up on the lengths (unchanged from the cut
+       version — the ombre reveal lands in the upper band that stays visible
+       longest as the next section covers the fixed scene) */
     const t1 = sstep(0, 0.62, p);
     const creep = sstep(0.62, 1, p);
     const wideZ = aspect < 1 ? 7.2 : aspect < 1.7 ? 6.4 : 5.9;
     const closeZ = aspect < 1 ? 3.0 : aspect < 1.7 ? 2.25 : 2.05;
     camera.position.set(
       0.16 * t1,
-      mix(0.56, CUT_Y + 0.10, t1) - 0.04 * creep,
+      mix(0.56, FOCUS_Y + 0.10, t1) - 0.04 * creep,
       mix(wideZ, closeZ, t1) - 0.12 * creep,
     );
     camera.fov = (aspect < 1 ? 48 : aspect < 1.7 ? 36 : 33) - 3 * t1;
     camera.updateProjectionMatrix();
-    /* the target sits below the cut line so the snip plays in the upper
-       quarter of the frame — the part still uncovered late in the scroll;
-       the late creep keeps the fresh edge above the next section's cover line */
-    camera.lookAt(0.02 * t1, mix(0.46, CUT_Y - 0.22, t1) - 0.08 * creep, 0.20 * t1);
-
-    /* shears: glide in from the right, one snip, withdraw */
-    const enter = sstep(0.56, 0.72, p);
-    const closeT = sstep(0.725, 0.755, p);
-    const wd = sstep(0.80, 0.97, p);
-    scissors.visible = enter > 0.001 && wd < 0.999;
-    scissors.position.set(
-      mix(2.1, 0.22, enter) + 1.7 * wd * wd,
-      CUT_Y + 0.012 + 0.06 * (1 - enter) - 0.05 * wd,
-      0.47,
-    );
-    scissors.rotation.set(-0.16, Math.PI, -0.06 - 0.12 * wd);
-    const open = 0.20 * (1 - closeT) + 0.08 * sstep(0.80, 0.92, p);
-    arms[0].rotation.z = open;
-    arms[1].rotation.z = -open;
-
-    spark.position.set(scissors.position.x - 0.30, CUT_Y + 0.10, 0.72);
-    spark.intensity = 1.2 * enter * (1 - wd) + 5 * Math.exp(-Math.pow((p - 0.745) / 0.018, 2));
+    camera.lookAt(0.02 * t1, mix(0.46, FOCUS_Y - 0.22, t1) - 0.08 * creep, 0.20 * t1);
 
     renderer.render(scene, camera);
   };
@@ -500,25 +395,21 @@ function buildScene(THREE, host, { strands, seed }) {
   };
 }
 
-/* ── hair shaders: camera-facing ribbons, Kajiya–Kay dual highlight ────── */
+/* ── hair shaders: dual-pose ribbons, ombre melt, Kajiya–Kay highlight ─── */
 
 const HAIR_VERT = /* glsl */`
 attribute vec3 aTangent;
+attribute vec3 aPosB;
+attribute vec3 aTanB;
 attribute float aSide;
 attribute float aU;
 attribute float aWidth;
 attribute vec3 aColor;
 attribute vec2 aRand;
-#ifdef CUT
-attribute vec3 aPivot;
-attribute float aDelay;
-attribute vec2 aSpin;
-#endif
-uniform float uGather;
+attribute float aStagger;
+uniform float uStyleT;
 uniform float uSwayAmp;
 uniform float uSwayPhase;
-uniform float uLift;
-uniform float uCutT;
 varying vec3 vColor;
 varying vec3 vT;
 varying vec3 vN;
@@ -527,41 +418,19 @@ varying float vU;
 varying float vSide;
 varying vec2 vRand;
 
-mat3 rotZ(float a){ float c = cos(a), s = sin(a); return mat3(c, -s, 0., s, c, 0., 0., 0., 1.); }
-mat3 rotX(float a){ float c = cos(a), s = sin(a); return mat3(1., 0., 0., 0., c, -s, 0., s, c); }
-
-vec3 gatherP(vec3 p, float g){
-  float wy = 1.0 - smoothstep(-0.02, 0.42, p.y);
-  float k = g * wy;
-  p.x = mix(p.x, p.x * 0.48, k);
-  p.z = mix(p.z, 0.40 + (p.z - 0.40) * 0.55, k);
-  return p;
-}
-
 void main(){
-  vec3 p = position;
-  vec3 T = aTangent;
+  float k = clamp(uStyleT * 1.3 - aStagger * 0.3, 0.0, 1.0);
+  k = k * k * (3.0 - 2.0 * k);
+  vec3 p = mix(position, aPosB, k);
+  vec3 T = mix(aTangent, aTanB, k);
 
   float swPh = aRand.x * 6.2831 + uSwayPhase;
   float sw = uSwayAmp * aU * aU;
   p.x += sw * sin(swPh);
   p.z += sw * 0.5 * cos(swPh * 0.8);
-  p = gatherP(p, uGather);
 
-#ifdef CUT
-  vec3 piv = gatherP(aPivot, uGather);
-  float t = clamp((uCutT - aDelay) / max(0.15, 1.0 - aDelay), 0.0, 1.0);
-  float e = t * t;
-  float wob = sin(t * 8.0 + aRand.y * 12.0);
-  mat3 R = rotZ(aSpin.x * (0.25 * t + 0.65 * e) + wob * 0.05 * t) * rotX(aSpin.y * (0.15 * t + 0.65 * e));
-  p = piv + R * (p - piv);
-  p.y -= 2.9 * e + 0.35 * t;
-  p.x += aSpin.y * 0.30 * e + wob * 0.02 * t;
-  p.z += aSpin.x * 0.08 * e;
-  T = R * T;
-#else
-  p.y += uLift * smoothstep(0.45, 1.0, aU);
-#endif
+  /* the lengths swing softly while the layers settle */
+  p.x += 0.04 * sin(k * 4.6) * (1.0 - k) * aU;
 
   T = normalize(T);
   vec3 toCam = normalize(cameraPosition - p);
@@ -579,6 +448,8 @@ void main(){
 `;
 
 const HAIR_FRAG = /* glsl */`
+uniform float uColorT;
+uniform float uSheen;
 varying vec3 vColor;
 varying vec3 vT;
 varying vec3 vN;
@@ -600,13 +471,30 @@ void main(){
   vec3 N = normalize(vN);
   if (!gl_FrontFacing) N = -N;
 
-  vec3 base = vColor;
-  base *= 0.30 + 0.70 * smoothstep(0.0, 0.30, vU);
-  base = mix(base, base * vec3(1.18, 1.06, 0.94), 0.28 * smoothstep(0.55, 1.0, vU));
+  /* the ombre: dark roots melting through caramel to honey ends; the melt
+     front climbs tip→root with the scroll, the way colour is painted on.
+     After-tones stay dark-valued — this pipeline blows anything brighter. */
+  /* linear-space values: three.js converts the JS-side hex tones to linear,
+     so these must live in the same range or they render five stops too hot */
+  vec3 caramelC = vec3(0.085, 0.036, 0.010);
+  vec3 honeyC = vec3(0.140, 0.068, 0.022);
+  vec3 after = mix(vColor, caramelC, smoothstep(0.52, 0.85, vU));
+  after = mix(after, honeyC, 0.70 * smoothstep(0.84, 0.98, vU));
+  after *= 0.88 + 0.24 * fract(vRand.y * 9.7);
+  float ck = smoothstep(0.0, 0.25, uColorT * 1.35 - (1.0 - vU) + (vRand.x - 0.5) * 0.08);
+  vec3 pigment = mix(vColor, after, ck);
 
-  vec3 L1 = normalize(vec3(0.55, 0.75, 0.55));  vec3 C1 = vec3(1.0, 0.94, 0.84) * 1.25;
-  vec3 L2 = normalize(vec3(-0.70, 0.35, -0.55)); vec3 C2 = vec3(1.0, 0.70, 0.58) * 1.05;
-  vec3 L3 = normalize(vec3(-0.08, 0.18, 0.98));  vec3 C3 = vec3(0.92, 0.87, 0.82) * 0.30;
+  vec3 base = pigment;
+  base *= 0.30 + 0.70 * smoothstep(0.0, 0.30, vU);
+  base = mix(base, base * vec3(1.18, 1.06, 0.94), 0.18 * smoothstep(0.55, 1.0, vU));
+
+  /* the key light drifts late in the scroll — the mirror-turn sheen */
+  vec3 L1 = normalize(mix(vec3(0.55, 0.75, 0.55), vec3(0.18, 0.85, 0.50), uSheen));
+  vec3 C1 = vec3(1.0, 0.94, 0.84) * 1.25;
+  vec3 L2 = normalize(vec3(-0.70, 0.35, -0.55));
+  vec3 C2 = vec3(1.0, 0.70, 0.58) * 1.05;
+  vec3 L3 = normalize(vec3(-0.08, 0.18, 0.98));
+  vec3 C3 = vec3(0.92, 0.87, 0.82) * 0.30;
 
   vec3 col = vec3(0.0);
   #define HAIR_DIFF(Ld) (pow(sqrt(max(0.0, 1.0 - dot(T, Ld) * dot(T, Ld))), 1.3) * (0.32 + 0.68 * clamp(dot(N, Ld) * 0.5 + 0.5, 0.0, 1.0)))
@@ -615,12 +503,13 @@ void main(){
   col += base * C3 * HAIR_DIFF(L3);
   col += base * mix(vec3(0.055, 0.05, 0.055), vec3(0.17, 0.16, 0.165), N.y * 0.5 + 0.5);
 
+  /* gloss builds as the treatment develops */
   float jitter = vRand.y - 0.5;
   vec3 T1 = normalize(T + N * (-0.10 + jitter * 0.08));
   vec3 T2 = normalize(T + N * ( 0.10 + jitter * 0.10));
   float sparkle = 0.65 + 0.55 * fract(vRand.y * 37.13);
-  col += vec3(1.0, 0.93, 0.80) * strandSpec(T1, V, L1, 240.0) * 0.70 * sparkle;
-  col += (base * 1.6 + vec3(0.02)) * strandSpec(T2, V, L1, 60.0);
+  col += vec3(1.0, 0.88, 0.68) * strandSpec(T1, V, L1, 240.0) * (0.55 + 0.30 * ck) * sparkle;
+  col += (base * 1.6 + vec3(0.02)) * strandSpec(T2, V, L1, 60.0) * (1.0 + 0.5 * ck);
   col += vec3(1.0, 0.80, 0.66) * strandSpec(T1, V, L2, 180.0) * 0.55 * sparkle;
 
   // inner layers of the fall sit deeper in z — darken them for volume
@@ -637,7 +526,7 @@ void main(){
 }
 `;
 
-/** A gradient equirect map so the steel reads as metal without an HDR file. */
+/** A gradient equirect map so the scene reads warm without an HDR file. */
 function studioEnvironment(THREE) {
   const c = document.createElement('canvas');
   c.width = 512; c.height = 256;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 /**
- * Real-time 3D hero background — the back of a woman's freshly gloss-treated hair, gathered and cut with a single snip as the page scrolls; the camera pushes in from the wide figure to a close-up of the lock.
+ * Real-time 3D hero background — the back of a woman's head, her dark hair transformed to a warm ombre as the page scrolls: colour melts up the lengths, layers settle, gloss builds. The camera pushes in from the wide figure to a close-up of the lengths.
  */
 export interface HaircutSceneProps {
   /** Scroll position, 0 to 1. The host owns the scroll listener; this component is pure with respect to it. */
