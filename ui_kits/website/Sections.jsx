@@ -71,22 +71,18 @@ function Menu({ compact = false, onBook }) {
   );
 }
 
-function Stylists({ onBook, limit, onViewAll }) {
-  const all = window.THS.stylists;
-  const list = limit ? all.slice(0, limit) : all;
+function Stylists({ onBook }) {
+  /* The roster lives on Instagram, where each stylist's highlight stays
+     current — the site never needs editing when the team changes. */
+  const ig = `https://www.instagram.com/${window.THS.studio.instagram.replace(/@/g, '')}/`;
   return (
     <section style={{ position: 'relative', zIndex: 1, background: 'var(--black-void)', padding: 'var(--section-y) 0', borderTop: '1px solid var(--line-faint)' }}>
       <div style={PAGE}>
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 40, flexWrap: 'wrap' }}>
-          <SectionHeading overline="Highlights" title="The stylists" lede={`Thirteen chairs, each its own book. Pick the hands you want, or take the first available.`} />
+        <SectionHeading overline="Highlights" title="The stylists" lede="Each chair keeps its own book. The stylists' latest work lives in our Instagram highlights — always current, straight from the chair." />
+        <div style={{ display: 'flex', gap: 14, marginTop: 40, flexWrap: 'wrap' }}>
+          <Button icon="external-link" href={ig} target="_blank" rel="noopener">See the stylists on Instagram</Button>
           <Button variant="secondary" onClick={onBook}>Book with a stylist</Button>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32, marginTop: 56 }}>
-          {list.map((s) => <StylistCard key={s.name} {...s} onClick={onBook} />)}
-        </div>
-        {limit && all.length > limit && (
-          <div style={{ marginTop: 44 }}><Button variant="ghost" icon="arrow-right" onClick={onViewAll}>All {all.length} stylists</Button></div>
-        )}
       </div>
     </section>
   );

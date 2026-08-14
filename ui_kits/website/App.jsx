@@ -27,7 +27,11 @@ function App() {
   const [scrolled, setScrolled] = React.useState(false);
   const [progress, setProgress] = React.useState(0);
   const ref = React.useRef(null);
-  const go = (id) => { setPage(id); setProgress(0); if (ref.current) ref.current.scrollTop = 0; };
+  const go = (id) => {
+    /* the stylist roster lives on Instagram — the nav item goes straight there */
+    if (id === 'team') { window.open(`https://www.instagram.com/${window.THS.studio.instagram.replace(/@/g, '')}/`, '_blank', 'noopener'); return; }
+    setPage(id); setProgress(0); if (ref.current) ref.current.scrollTop = 0;
+  };
   const onScroll = (e) => {
     const y = e.target.scrollTop;
     setScrolled(y > 40);
@@ -36,9 +40,8 @@ function App() {
   const book = () => window.open(window.THS.studio.booking, '_blank');
 
   const pages = {
-    home: <><Hero onBook={book} progress={progress} /><MissionStrip /><Menu onBook={book} /><Stylists onBook={book} limit={4} onViewAll={() => go('team')} /><WorkGrid /><Voices /><BookCta /></>,
+    home: <><Hero onBook={book} progress={progress} /><MissionStrip /><Menu onBook={book} /><Stylists onBook={book} /><WorkGrid /><Voices /><BookCta /></>,
     services: <><PageHeader overline="Pricing list" title="Services" lede="Starting prices for bra length or shorter." /><Menu onBook={book} /><BookCta /></>,
-    team: <><PageHeader overline="Highlights" title="Stylists" lede="Eleven years of hands in the same room." /><Stylists onBook={book} /><Voices /></>,
     work: <><PageHeader overline="Recent work" title="Work" lede="Straight from the feed." /><WorkGrid /><BookCta /></>,
     visit: <><PageHeader overline="Visit" title="Find us" /><VisitBlock /><Menu compact onBook={book} /></>,
   };

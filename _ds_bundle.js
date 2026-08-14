@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"TheHairStudioDesignSystem_03d078","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"Logo","sourcePath":"components/core/Logo.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Card","sourcePath":"components/display/Card.jsx"},{"name":"HaircutScene","sourcePath":"components/display/HaircutScene.jsx"},{"name":"PhotoFrame","sourcePath":"components/display/PhotoFrame.jsx"},{"name":"Rating","sourcePath":"components/display/Rating.jsx"},{"name":"ServiceRow","sourcePath":"components/display/ServiceRow.jsx"},{"name":"StylistCard","sourcePath":"components/display/StylistCard.jsx"},{"name":"Testimonial","sourcePath":"components/display/Testimonial.jsx"},{"name":"WorkTile","sourcePath":"components/display/WorkTile.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"RadioGroup","sourcePath":"components/forms/RadioGroup.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Textarea","sourcePath":"components/forms/Textarea.jsx"},{"name":"Footer","sourcePath":"components/navigation/Footer.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"73c3efba7c5d","components/core/Button.jsx":"86bccee65fd1","components/core/Divider.jsx":"dab554ef70f6","components/core/Icon.jsx":"682e34733bb3","components/core/IconButton.jsx":"b7af9f973776","components/core/Logo.jsx":"6151e4315740","components/core/SectionHeading.jsx":"3b47aea23d21","components/core/Tag.jsx":"ae4c7e798c2d","components/display/Card.jsx":"7a49f48b2b0a","components/display/HaircutScene.jsx":"71c6a82ec815","components/display/PhotoFrame.jsx":"dcd812e57362","components/display/Rating.jsx":"286c13a7ba03","components/display/ServiceRow.jsx":"9d33ac2bd29f","components/display/StylistCard.jsx":"e02e2d89d551","components/display/Testimonial.jsx":"d190dcc1a45d","components/display/WorkTile.jsx":"0cf9538ece54","components/feedback/Dialog.jsx":"246513e612f8","components/feedback/EmptyState.jsx":"228cd9922ac5","components/feedback/Toast.jsx":"c568909b5c6a","components/forms/Checkbox.jsx":"20296a039259","components/forms/Input.jsx":"d629d2659a33","components/forms/RadioGroup.jsx":"02709459d518","components/forms/Select.jsx":"5617241b162f","components/forms/Switch.jsx":"b09aeddc45e0","components/forms/Textarea.jsx":"3690d5bd1b4e","components/navigation/Footer.jsx":"6cdae1068ee9","components/navigation/NavBar.jsx":"12eef6a0dd75","components/navigation/Tabs.jsx":"7b0f40dcde74","ui_kits/booking/Booking.jsx":"2c06b5b11189","ui_kits/social/Posts.jsx":"7f4477f748cf","ui_kits/website/App.jsx":"4a8793976dec","ui_kits/website/Sections.jsx":"55c4b94fb3bb","ui_kits/website/data.js":"bc106926f16c"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"TheHairStudioDesignSystem_03d078","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"Logo","sourcePath":"components/core/Logo.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Card","sourcePath":"components/display/Card.jsx"},{"name":"HaircutScene","sourcePath":"components/display/HaircutScene.jsx"},{"name":"PhotoFrame","sourcePath":"components/display/PhotoFrame.jsx"},{"name":"Rating","sourcePath":"components/display/Rating.jsx"},{"name":"ServiceRow","sourcePath":"components/display/ServiceRow.jsx"},{"name":"StylistCard","sourcePath":"components/display/StylistCard.jsx"},{"name":"Testimonial","sourcePath":"components/display/Testimonial.jsx"},{"name":"WorkTile","sourcePath":"components/display/WorkTile.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"RadioGroup","sourcePath":"components/forms/RadioGroup.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Textarea","sourcePath":"components/forms/Textarea.jsx"},{"name":"Footer","sourcePath":"components/navigation/Footer.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"73c3efba7c5d","components/core/Button.jsx":"86bccee65fd1","components/core/Divider.jsx":"dab554ef70f6","components/core/Icon.jsx":"682e34733bb3","components/core/IconButton.jsx":"b7af9f973776","components/core/Logo.jsx":"6151e4315740","components/core/SectionHeading.jsx":"3b47aea23d21","components/core/Tag.jsx":"ae4c7e798c2d","components/display/Card.jsx":"7a49f48b2b0a","components/display/HaircutScene.jsx":"71c6a82ec815","components/display/PhotoFrame.jsx":"dcd812e57362","components/display/Rating.jsx":"286c13a7ba03","components/display/ServiceRow.jsx":"9d33ac2bd29f","components/display/StylistCard.jsx":"e02e2d89d551","components/display/Testimonial.jsx":"d190dcc1a45d","components/display/WorkTile.jsx":"0cf9538ece54","components/feedback/Dialog.jsx":"246513e612f8","components/feedback/EmptyState.jsx":"228cd9922ac5","components/feedback/Toast.jsx":"c568909b5c6a","components/forms/Checkbox.jsx":"20296a039259","components/forms/Input.jsx":"d629d2659a33","components/forms/RadioGroup.jsx":"02709459d518","components/forms/Select.jsx":"5617241b162f","components/forms/Switch.jsx":"b09aeddc45e0","components/forms/Textarea.jsx":"3690d5bd1b4e","components/navigation/Footer.jsx":"9f08c278175d","components/navigation/NavBar.jsx":"12eef6a0dd75","components/navigation/Tabs.jsx":"7b0f40dcde74","ui_kits/booking/Booking.jsx":"2c06b5b11189","ui_kits/social/Posts.jsx":"7f4477f748cf","ui_kits/website/App.jsx":"ebc5bfedc649","ui_kits/website/Sections.jsx":"28e63cd2b18e","ui_kits/website/data.js":"bc106926f16c"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -2491,7 +2491,9 @@ function Footer({
     name: "phone",
     size: 14
   }), phone)), instagram && /*#__PURE__*/React.createElement("a", {
-    href: "#",
+    href: `https://www.instagram.com/${String(instagram).replace(/@/g, '')}/`,
+    target: "_blank",
+    rel: "noopener",
     style: {
       display: 'inline-flex',
       alignItems: 'center',
@@ -3819,6 +3821,11 @@ function App() {
   const [progress, setProgress] = React.useState(0);
   const ref = React.useRef(null);
   const go = id => {
+    /* the stylist roster lives on Instagram — the nav item goes straight there */
+    if (id === 'team') {
+      window.open(`https://www.instagram.com/${window.THS.studio.instagram.replace(/@/g, '')}/`, '_blank', 'noopener');
+      return;
+    }
     setPage(id);
     setProgress(0);
     if (ref.current) ref.current.scrollTop = 0;
@@ -3836,9 +3843,7 @@ function App() {
     }), /*#__PURE__*/React.createElement(MissionStrip, null), /*#__PURE__*/React.createElement(Menu, {
       onBook: book
     }), /*#__PURE__*/React.createElement(Stylists, {
-      onBook: book,
-      limit: 4,
-      onViewAll: () => go('team')
+      onBook: book
     }), /*#__PURE__*/React.createElement(WorkGrid, null), /*#__PURE__*/React.createElement(Voices, null), /*#__PURE__*/React.createElement(BookCta, null)),
     services: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHeader, {
       overline: "Pricing list",
@@ -3847,13 +3852,6 @@ function App() {
     }), /*#__PURE__*/React.createElement(Menu, {
       onBook: book
     }), /*#__PURE__*/React.createElement(BookCta, null)),
-    team: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHeader, {
-      overline: "Highlights",
-      title: "Stylists",
-      lede: "Eleven years of hands in the same room."
-    }), /*#__PURE__*/React.createElement(Stylists, {
-      onBook: book
-    }), /*#__PURE__*/React.createElement(Voices, null)),
     work: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHeader, {
       overline: "Recent work",
       title: "Work",
@@ -4147,12 +4145,11 @@ function Menu({
   }, "Book a service"))));
 }
 function Stylists({
-  onBook,
-  limit,
-  onViewAll
+  onBook
 }) {
-  const all = window.THS.stylists;
-  const list = limit ? all.slice(0, limit) : all;
+  /* The roster lives on Instagram, where each stylist's highlight stays
+     current — the site never needs editing when the team changes. */
+  const ig = `https://www.instagram.com/${window.THS.studio.instagram.replace(/@/g, '')}/`;
   return /*#__PURE__*/React.createElement("section", {
     style: {
       position: 'relative',
@@ -4163,41 +4160,26 @@ function Stylists({
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: PAGE
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      alignItems: 'flex-end',
-      justifyContent: 'space-between',
-      gap: 40,
-      flexWrap: 'wrap'
-    }
   }, /*#__PURE__*/React.createElement(SectionHeading, {
     overline: "Highlights",
     title: "The stylists",
-    lede: `Thirteen chairs, each its own book. Pick the hands you want, or take the first available.`
-  }), /*#__PURE__*/React.createElement(Button, {
-    variant: "secondary",
-    onClick: onBook
-  }, "Book with a stylist")), /*#__PURE__*/React.createElement("div", {
+    lede: "Each chair keeps its own book. The stylists' latest work lives in our Instagram highlights \u2014 always current, straight from the chair."
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)',
-      gap: 32,
-      marginTop: 56
-    }
-  }, list.map(s => /*#__PURE__*/React.createElement(StylistCard, _extends({
-    key: s.name
-  }, s, {
-    onClick: onBook
-  })))), limit && all.length > limit && /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 44
+      display: 'flex',
+      gap: 14,
+      marginTop: 40,
+      flexWrap: 'wrap'
     }
   }, /*#__PURE__*/React.createElement(Button, {
-    variant: "ghost",
-    icon: "arrow-right",
-    onClick: onViewAll
-  }, "All ", all.length, " stylists"))));
+    icon: "external-link",
+    href: ig,
+    target: "_blank",
+    rel: "noopener"
+  }, "See the stylists on Instagram"), /*#__PURE__*/React.createElement(Button, {
+    variant: "secondary",
+    onClick: onBook
+  }, "Book with a stylist"))));
 }
 function WorkGrid({
   filterable = true

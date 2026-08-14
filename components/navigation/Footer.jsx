@@ -16,7 +16,7 @@ export function Footer({ address, phone, instagram, hours = [], columns = [], st
           <div style={{ display: 'flex', gap: 18, marginTop: 20 }}>
             {phone && <a href={`tel:${phone.replace(/[^0-9]/g, '')}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 'var(--body-sm-size)', borderBottom: 'none', color: 'var(--text-secondary)' }}><Icon name="phone" size={14} />{phone}</a>}
           </div>
-          {instagram && <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 12, fontSize: 'var(--body-sm-size)', borderBottom: 'none', color: 'var(--accent-300)' }}><Icon name="external-link" size={14} />{instagram}</a>}
+          {instagram && <a href={`https://www.instagram.com/${String(instagram).replace(/@/g, '')}/`} target="_blank" rel="noopener" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 12, fontSize: 'var(--body-sm-size)', borderBottom: 'none', color: 'var(--accent-300)' }}><Icon name="external-link" size={14} />{instagram}</a>}
         </div>
         {hours.length > 0 && (
           <div>

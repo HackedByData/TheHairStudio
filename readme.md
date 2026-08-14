@@ -188,7 +188,7 @@ Nothing in the sources defined a component inventory, so the whole set is author
 
 | Kit | Path | What it covers |
 | --- | --- | --- |
-| **Website** | `ui_kits/website/` | Five views — home, services, stylists, work, visit. Full-bleed hero, bone mission strip, three-column pricing menu, stylist highlights, filterable work grid, testimonials, oxblood booking band, footer. |
+| **Website** | `ui_kits/website/` | Four views — home, services, work, visit. The Stylists nav item opens the salon's Instagram, where each stylist's highlight stays current — the site needs no editing when the team changes. Full-bleed hero, bone mission strip, three-column pricing menu, Instagram stylists band, filterable work grid, testimonials, oxblood booking band, footer. |
 | **Booking** | `ui_kits/booking/` | A clickable four-step reservation: service → stylist → time → details, with a sticky summary, an empty state for closed Mondays, a confirmation dialog and a toast. |
 | **Social** | `ui_kits/social/` | Instagram templates at export size — 1080×1920 pricing story, 1080×1080 stylist highlight / mission post / service card, and the 3-up feed grid. *Built before the surface list was narrowed; kept because the pricing story is the salon's existing artwork.* |
 
