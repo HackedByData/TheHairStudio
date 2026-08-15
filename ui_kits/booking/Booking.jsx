@@ -63,7 +63,7 @@ function Summary({ service, stylist, day, slot }) {
 function BookingApp() {
   const [step, setStep] = React.useState(0);
   const [service, setService] = React.useState(null);
-  const [group, setGroup] = React.useState('Color Services');
+  const [group, setGroup] = React.useState(window.THS.menu[0].group);
   const [stylist, setStylist] = React.useState(null);
   const [day, setDay] = React.useState('thu');
   const [slot, setSlot] = React.useState(null);

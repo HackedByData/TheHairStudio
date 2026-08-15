@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"TheHairStudioDesignSystem_03d078","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"Logo","sourcePath":"components/core/Logo.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Card","sourcePath":"components/display/Card.jsx"},{"name":"HaircutScene","sourcePath":"components/display/HaircutScene.jsx"},{"name":"PhotoFrame","sourcePath":"components/display/PhotoFrame.jsx"},{"name":"Rating","sourcePath":"components/display/Rating.jsx"},{"name":"ServiceRow","sourcePath":"components/display/ServiceRow.jsx"},{"name":"StylistCard","sourcePath":"components/display/StylistCard.jsx"},{"name":"Testimonial","sourcePath":"components/display/Testimonial.jsx"},{"name":"WorkTile","sourcePath":"components/display/WorkTile.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"RadioGroup","sourcePath":"components/forms/RadioGroup.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Textarea","sourcePath":"components/forms/Textarea.jsx"},{"name":"Footer","sourcePath":"components/navigation/Footer.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"73c3efba7c5d","components/core/Button.jsx":"86bccee65fd1","components/core/Divider.jsx":"dab554ef70f6","components/core/Icon.jsx":"682e34733bb3","components/core/IconButton.jsx":"b7af9f973776","components/core/Logo.jsx":"6151e4315740","components/core/SectionHeading.jsx":"3b47aea23d21","components/core/Tag.jsx":"ae4c7e798c2d","components/display/Card.jsx":"7a49f48b2b0a","components/display/HaircutScene.jsx":"71c6a82ec815","components/display/PhotoFrame.jsx":"dcd812e57362","components/display/Rating.jsx":"286c13a7ba03","components/display/ServiceRow.jsx":"9d33ac2bd29f","components/display/StylistCard.jsx":"e02e2d89d551","components/display/Testimonial.jsx":"d190dcc1a45d","components/display/WorkTile.jsx":"0cf9538ece54","components/feedback/Dialog.jsx":"246513e612f8","components/feedback/EmptyState.jsx":"228cd9922ac5","components/feedback/Toast.jsx":"c568909b5c6a","components/forms/Checkbox.jsx":"20296a039259","components/forms/Input.jsx":"d629d2659a33","components/forms/RadioGroup.jsx":"02709459d518","components/forms/Select.jsx":"5617241b162f","components/forms/Switch.jsx":"b09aeddc45e0","components/forms/Textarea.jsx":"3690d5bd1b4e","components/navigation/Footer.jsx":"9f08c278175d","components/navigation/NavBar.jsx":"12eef6a0dd75","components/navigation/Tabs.jsx":"7b0f40dcde74","ui_kits/booking/Booking.jsx":"2c06b5b11189","ui_kits/social/Posts.jsx":"7f4477f748cf","ui_kits/website/App.jsx":"ebc5bfedc649","ui_kits/website/Sections.jsx":"28e63cd2b18e","ui_kits/website/data.js":"bc106926f16c"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"TheHairStudioDesignSystem_03d078","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"Logo","sourcePath":"components/core/Logo.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Card","sourcePath":"components/display/Card.jsx"},{"name":"HaircutScene","sourcePath":"components/display/HaircutScene.jsx"},{"name":"PhotoFrame","sourcePath":"components/display/PhotoFrame.jsx"},{"name":"Rating","sourcePath":"components/display/Rating.jsx"},{"name":"ServiceRow","sourcePath":"components/display/ServiceRow.jsx"},{"name":"StylistCard","sourcePath":"components/display/StylistCard.jsx"},{"name":"Testimonial","sourcePath":"components/display/Testimonial.jsx"},{"name":"WorkTile","sourcePath":"components/display/WorkTile.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"RadioGroup","sourcePath":"components/forms/RadioGroup.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Textarea","sourcePath":"components/forms/Textarea.jsx"},{"name":"Footer","sourcePath":"components/navigation/Footer.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"73c3efba7c5d","components/core/Button.jsx":"86bccee65fd1","components/core/Divider.jsx":"dab554ef70f6","components/core/Icon.jsx":"682e34733bb3","components/core/IconButton.jsx":"b7af9f973776","components/core/Logo.jsx":"6151e4315740","components/core/SectionHeading.jsx":"3b47aea23d21","components/core/Tag.jsx":"ae4c7e798c2d","components/display/Card.jsx":"7a49f48b2b0a","components/display/HaircutScene.jsx":"71c6a82ec815","components/display/PhotoFrame.jsx":"dcd812e57362","components/display/Rating.jsx":"286c13a7ba03","components/display/ServiceRow.jsx":"9d33ac2bd29f","components/display/StylistCard.jsx":"e02e2d89d551","components/display/Testimonial.jsx":"d190dcc1a45d","components/display/WorkTile.jsx":"0cf9538ece54","components/feedback/Dialog.jsx":"246513e612f8","components/feedback/EmptyState.jsx":"228cd9922ac5","components/feedback/Toast.jsx":"c568909b5c6a","components/forms/Checkbox.jsx":"20296a039259","components/forms/Input.jsx":"d629d2659a33","components/forms/RadioGroup.jsx":"02709459d518","components/forms/Select.jsx":"5617241b162f","components/forms/Switch.jsx":"b09aeddc45e0","components/forms/Textarea.jsx":"3690d5bd1b4e","components/navigation/Footer.jsx":"9f08c278175d","components/navigation/NavBar.jsx":"12eef6a0dd75","components/navigation/Tabs.jsx":"7b0f40dcde74","ui_kits/booking/Booking.jsx":"e234148988c6","ui_kits/social/Posts.jsx":"7f4477f748cf","ui_kits/website/App.jsx":"ebc5bfedc649","ui_kits/website/Sections.jsx":"28e63cd2b18e","ui_kits/website/data.js":"706846b533a1"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -2927,7 +2927,7 @@ function Summary({
 function BookingApp() {
   const [step, setStep] = React.useState(0);
   const [service, setService] = React.useState(null);
-  const [group, setGroup] = React.useState('Color Services');
+  const [group, setGroup] = React.useState(window.THS.menu[0].group);
   const [stylist, setStylist] = React.useState(null);
   const [day, setDay] = React.useState('thu');
   const [slot, setSlot] = React.useState(null);
@@ -4402,49 +4402,106 @@ window.THS = {
     time: '9:00 – 4:00'
   }],
   menu: [{
-    group: 'Haircuts & Styling',
+    group: 'Haircuts',
     items: [{
-      name: "Women's Haircut",
+      name: 'Woman’s Haircut',
       price: '$75'
     }, {
-      name: "Girls' Haircut",
-      price: '$50'
+      name: 'Men’s Haircut',
+      price: '$45'
     }, {
-      name: "Men's Haircut",
+      name: 'Boy’s Haircut',
       price: '$40'
     }, {
-      name: 'Blowout',
-      price: '$65'
+      name: 'Girl’s Haircut',
+      price: '$50'
     }, {
-      name: 'Style / Updo',
-      price: '$85'
+      name: 'Bang Trim',
+      price: '$20'
     }]
   }, {
-    group: 'Color Services',
+    group: 'Blonding & Balayage',
     items: [{
-      name: 'Root Touch-Up',
-      price: '$110'
+      name: 'Balayage',
+      price: '$295'
+    }, {
+      name: 'Specialty Blonding (Balayage)',
+      price: '$330'
+    }, {
+      name: 'Dimensional Blonde (Balayage)',
+      price: '$275'
     }, {
       name: 'Full Highlights',
       price: '$285'
     }, {
-      name: 'Full Hair Color',
-      price: '$160'
+      name: 'Partial Highlights',
+      price: '$235'
     }, {
-      name: 'Balayage',
-      price: '$295'
+      name: 'Fashion Colors',
+      price: '$285'
+    }, {
+      name: 'Ombré',
+      price: '$360'
     }]
   }, {
-    group: 'Treatments & Specials',
+    group: 'Color',
     items: [{
-      name: 'Deep Conditioning',
-      price: '$30'
+      name: 'Full Color',
+      price: '$160'
+    }, {
+      name: 'Color and Cut',
+      price: '$225'
+    }, {
+      name: 'Color Correction',
+      price: '$325'
+    }, {
+      name: 'Roots',
+      price: '$110'
+    }, {
+      name: 'Toner',
+      price: '$120'
+    }, {
+      name: 'Bleach Retouch',
+      price: '$160'
+    }]
+  }, {
+    group: 'Styling',
+    items: [{
+      name: 'Blowout',
+      price: '$65'
+    }, {
+      name: 'Style/Updo',
+      price: '$85'
+    }]
+  }, {
+    group: 'Extensions',
+    items: [{
+      name: 'Extensions',
+      price: '$240'
+    }, {
+      name: 'Extension Removal (Reinstallation)',
+      price: '$265'
+    }, {
+      name: 'Extension Removal',
+      price: '$85'
+    }]
+  }, {
+    group: 'Perms & Treatments',
+    items: [{
+      name: 'Men’s Perm',
+      price: '$160'
+    }, {
+      name: 'Women’s Perm',
+      price: '$225'
+    }, {
+      name: 'Keratin Treatment',
+      price: '$285'
     }, {
       name: 'Brazilian Blowout',
       price: '$385'
     }, {
-      name: 'Cut & Color Special',
-      price: '$225'
+      name: 'GK Treatment',
+      price: '$285'
     }]
   }],
   priceDisclaimer: 'Starting prices are for bra length or shorter. Length and thickness are extra. Hair length and density will be considered.',

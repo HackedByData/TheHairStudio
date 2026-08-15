@@ -25,23 +25,45 @@ window.THS = {
     { day: 'Sunday', time: '9:00 – 4:00' },
   ],
   menu: [
-    { group: 'Haircuts & Styling', items: [
-      { name: "Women's Haircut", price: '$75' },
-      { name: "Girls' Haircut", price: '$50' },
-      { name: "Men's Haircut", price: '$40' },
-      { name: 'Blowout', price: '$65' },
-      { name: 'Style / Updo', price: '$85' },
+    { group: 'Haircuts', items: [
+      { name: 'Woman’s Haircut', price: '$75' },
+      { name: 'Men’s Haircut', price: '$45' },
+      { name: 'Boy’s Haircut', price: '$40' },
+      { name: 'Girl’s Haircut', price: '$50' },
+      { name: 'Bang Trim', price: '$20' },
     ]},
-    { group: 'Color Services', items: [
-      { name: 'Root Touch-Up', price: '$110' },
-      { name: 'Full Highlights', price: '$285' },
-      { name: 'Full Hair Color', price: '$160' },
+    { group: 'Blonding & Balayage', items: [
       { name: 'Balayage', price: '$295' },
+      { name: 'Specialty Blonding (Balayage)', price: '$330' },
+      { name: 'Dimensional Blonde (Balayage)', price: '$275' },
+      { name: 'Full Highlights', price: '$285' },
+      { name: 'Partial Highlights', price: '$235' },
+      { name: 'Fashion Colors', price: '$285' },
+      { name: 'Ombré', price: '$360' },
     ]},
-    { group: 'Treatments & Specials', items: [
-      { name: 'Deep Conditioning', price: '$30' },
+    { group: 'Color', items: [
+      { name: 'Full Color', price: '$160' },
+      { name: 'Color and Cut', price: '$225' },
+      { name: 'Color Correction', price: '$325' },
+      { name: 'Roots', price: '$110' },
+      { name: 'Toner', price: '$120' },
+      { name: 'Bleach Retouch', price: '$160' },
+    ]},
+    { group: 'Styling', items: [
+      { name: 'Blowout', price: '$65' },
+      { name: 'Style/Updo', price: '$85' },
+    ]},
+    { group: 'Extensions', items: [
+      { name: 'Extensions', price: '$240' },
+      { name: 'Extension Removal (Reinstallation)', price: '$265' },
+      { name: 'Extension Removal', price: '$85' },
+    ]},
+    { group: 'Perms & Treatments', items: [
+      { name: 'Men’s Perm', price: '$160' },
+      { name: 'Women’s Perm', price: '$225' },
+      { name: 'Keratin Treatment', price: '$285' },
       { name: 'Brazilian Blowout', price: '$385' },
-      { name: 'Cut & Color Special', price: '$225' },
+      { name: 'GK Treatment', price: '$285' },
     ]},
   ],
   priceDisclaimer: 'Starting prices are for bra length or shorter. Length and thickness are extra. Hair length and density will be considered.',
